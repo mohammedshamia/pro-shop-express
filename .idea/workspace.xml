@@ -11,11 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99941d3-4d56-4aa9-9806-275bae64002f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/screens/ProductPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/data/products.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +38,9 @@
     <bower.json value="" />
   </component>
   <component name="ProjectId" id="1irSMdfqHQ7H8lnk5TLFL6RDLz6" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -46,6 +48,7 @@
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -58,6 +61,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\Desktop\projects\pro-shop\backend\data" />
+      <recent name="C:\Users\HP\Desktop\projects\pro-shop\frontend\src" />
+      <recent name="C:\Users\HP\Desktop\projects\pro-shop\backend" />
       <recent name="C:\Users\HP\Desktop\pro-shop\frontend\src" />
       <recent name="C:\Users\HP\Desktop\pro-shop\frontend\public" />
     </key>
@@ -85,7 +91,8 @@
       <workItem from="1602701889038" duration="606000" />
       <workItem from="1602745698775" duration="7018000" />
       <workItem from="1602784330044" duration="1369000" />
-      <workItem from="1602875993463" duration="7305000" />
+      <workItem from="1602875993463" duration="7392000" />
+      <workItem from="1602941546568" duration="1036000" />
     </task>
     <servers />
   </component>
@@ -103,6 +110,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="174" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602747024078">
