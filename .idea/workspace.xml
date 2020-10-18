@@ -11,11 +11,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99941d3-4d56-4aa9-9806-275bae64002f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/data/products.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettier.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.prettier.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/products.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/HomeePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/HomeePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/ProductPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/ProductPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +58,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../NejmaApp/nejma-be" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\HP\node_modules\prettier" />
     <property name="run.prettier.on.save" value="true" />
@@ -61,9 +67,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\Desktop\projects\pro-shop\backend" />
       <recent name="C:\Users\HP\Desktop\projects\pro-shop\backend\data" />
       <recent name="C:\Users\HP\Desktop\projects\pro-shop\frontend\src" />
-      <recent name="C:\Users\HP\Desktop\projects\pro-shop\backend" />
       <recent name="C:\Users\HP\Desktop\pro-shop\frontend\src" />
       <recent name="C:\Users\HP\Desktop\pro-shop\frontend\public" />
     </key>
@@ -93,6 +99,7 @@
       <workItem from="1602784330044" duration="1369000" />
       <workItem from="1602875993463" duration="7392000" />
       <workItem from="1602941546568" duration="1036000" />
+      <workItem from="1602946708470" duration="7866000" />
     </task>
     <servers />
   </component>
@@ -119,17 +126,26 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="174" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860@0.0.1440.860" timestamp="1602747024078" />
-    <state x="698" y="166" key="FileChooserDialogImpl" timestamp="1602751693340">
+    <state x="450" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602947824986">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="698" y="166" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1602751693340" />
+    <state x="450" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.860@0.0.1440.860" timestamp="1602947824986" />
+    <state x="662" y="141" key="FileChooserDialogImpl" timestamp="1602967660858">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="662" y="141" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602967660858" />
+    <state x="698" y="166" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1602953647719" />
     <state x="221" y="75" key="SettingsEditor" timestamp="1602747561519">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="221" y="75" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1602747561519" />
-    <state x="383" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1602876230171">
+    <state x="427" y="163" width="585" height="534" key="find.popup" timestamp="1602947868047">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="383" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1440.860@0.0.1440.860" timestamp="1602876230171" />
+    <state x="427" y="163" width="585" height="534" key="find.popup/0.0.1440.860@0.0.1440.860" timestamp="1602947868047" />
+    <state x="383" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1602947298601">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="383" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1440.860@0.0.1440.860" timestamp="1602947298601" />
   </component>
 </project>

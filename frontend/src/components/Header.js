@@ -12,7 +12,7 @@ import { LinkContainer } from "react-router-bootstrap";
 
 const Header = () => (
   <header>
-    <Navbar bg="dark" variant={"dark"} expand="lg" CollapseOnSelect>
+    <Navbar bg="dark" variant={"dark"} expand="lg" collapseOnSelect>
       <Container>
         <LinkContainer to="/">
           <Navbar.Brand>Pro-shop</Navbar.Brand>
