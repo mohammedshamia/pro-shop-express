@@ -21,10 +21,12 @@ router.get(
 router.get(
   "/:id",
   expressAsyncHandler(async (req, res) => {
-    const product = await Product.findById(req.params.id).catch((e) => {
-      res.status(404).json({ message: "Product not found" });
-    });
+    const product = await Product.findById(req.params.id);
     if (product) res.json(product);
+    else {
+      res.status(404);
+      throw new Error("Product not found");
+    }
   })
 );
 

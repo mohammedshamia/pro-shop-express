@@ -48,7 +48,7 @@ const productSchema = mongoose.Schema(
       required: true,
     },
     reviews: [reviewsSchema],
-    raring: {
+    rating: {
       type: Number,
       required: true,
       default: 0,
