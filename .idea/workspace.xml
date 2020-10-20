@@ -11,19 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99941d3-4d56-4aa9-9806-275bae64002f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Loader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Message.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/redux/product/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/redux/product/productConstants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/redux/product/productSelectors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/redux/product/prooductReducers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/redux/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/redux/cart/cartActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/redux/cart/cartConstants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/redux/cart/cartReducers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/redux/cart/cartSelectors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/screens/CartPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/HomeePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/HomeePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/screens/ProductPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/ProductPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +102,8 @@
       <workItem from="1603044544923" duration="5815000" />
       <workItem from="1603097115863" duration="6132000" />
       <workItem from="1603141211569" duration="3406000" />
-      <workItem from="1603167173902" duration="6598000" />
+      <workItem from="1603167173902" duration="6925000" />
+      <workItem from="1603223327754" duration="3507000" />
     </task>
     <servers />
   </component>

@@ -5,6 +5,7 @@ import { Container } from "react-bootstrap";
 import HomePage from "./screens/HomeePage";
 import { Route } from "react-router";
 import ProductPage from "./screens/ProductPage";
+import CartPage from "./screens/CartPage";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <main className="py-3">
         <Container>
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/products/:id" component={ProductPage} />
+          <Route path="/products/:id" component={ProductPage} />
+          <Route path="/cart/:id?" component={CartPage} />
         </Container>
       </main>
 

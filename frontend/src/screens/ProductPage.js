@@ -16,7 +16,7 @@ import { getProductsDetails } from "../redux/product/actions";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
 
-const ProductPage = ({ match }) => {
+const ProductPage = ({ match, history }) => {
   const [qty, setQty] = useState(0);
   const dispatch = useDispatch();
   const { product, isLoading, error } = useSelector(productsDetailsSelector);
@@ -25,7 +25,9 @@ const ProductPage = ({ match }) => {
     dispatch(getProductsDetails(match.params.id));
   }, [dispatch, match]);
 
-  const addToCartHandler = (e) => setQty((prevState) => {});
+  const addToCartHandler = () => {
+    history.push(`/cart/${match.params.id}?qty=${qty}`);
+  };
 
   return (
     <>
@@ -102,6 +104,7 @@ const ProductPage = ({ match }) => {
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Button
+                    onClick={addToCartHandler}
                     disabled={product.countInStock === 0}
                     className="btn-block"
                     type="button"
