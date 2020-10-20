@@ -9,7 +9,7 @@ import ProductPage from "./screens/ProductPage";
 function App() {
   return (
     <>
-      <Header>header</Header>
+      <Header />
       <main className="py-3">
         <Container>
           <Route exact path="/" component={HomePage} />
