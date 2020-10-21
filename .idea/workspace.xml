@@ -11,14 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99941d3-4d56-4aa9-9806-275bae64002f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/redux/cart/cartActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/redux/cart/cartConstants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/redux/cart/cartReducers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/redux/cart/cartSelectors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/screens/CartPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/cart/cartActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/cart/cartActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/cart/cartReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/cart/cartReducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/cart/cartSelectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/cart/cartSelectors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/CartPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/CartPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/screens/ProductPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/ProductPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +102,9 @@
       <workItem from="1603097115863" duration="6132000" />
       <workItem from="1603141211569" duration="3406000" />
       <workItem from="1603167173902" duration="6925000" />
-      <workItem from="1603223327754" duration="3507000" />
+      <workItem from="1603223327754" duration="3890000" />
+      <workItem from="1603271441008" duration="18000" />
+      <workItem from="1603279606044" duration="3912000" />
     </task>
     <servers />
   </component>
@@ -155,6 +156,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="427" y="163" width="585" height="534" key="find.popup/0.0.1440.860@0.0.1440.860" timestamp="1602947868047" />
+    <state x="376" y="195" key="run.anything.popup" timestamp="1603280229152">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="376" y="195" key="run.anything.popup/0.0.1440.860@0.0.1440.860" timestamp="1603280229152" />
     <state x="383" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1602947298601">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
