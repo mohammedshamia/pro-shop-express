@@ -11,14 +11,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99941d3-4d56-4aa9-9806-275bae64002f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/controllers/productController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/controllers/userController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/middleware/authMiddleware.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/route/userRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/utils/generateWebToken.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/cart/cartActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/cart/cartActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/cart/cartReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/cart/cartReducers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/cart/cartSelectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/cart/cartSelectors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/CartPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/CartPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/ProductPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/ProductPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/userModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/userModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/route/productRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/route/productRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +58,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../NejmaApp/nejma-UX" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../NejmaApp/nejma-be" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\HP\node_modules\prettier" />
     <property name="run.prettier.on.save" value="true" />
@@ -104,7 +107,8 @@
       <workItem from="1603167173902" duration="6925000" />
       <workItem from="1603223327754" duration="3890000" />
       <workItem from="1603271441008" duration="18000" />
-      <workItem from="1603279606044" duration="3912000" />
+      <workItem from="1603279606044" duration="4348000" />
+      <workItem from="1603334733042" duration="12743000" />
     </task>
     <servers />
   </component>
@@ -139,11 +143,11 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="450" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.860@0.0.1440.860" timestamp="1602947824986" />
-    <state x="698" y="166" key="FileChooserDialogImpl" timestamp="1603167626519">
+    <state x="698" y="166" key="FileChooserDialogImpl" timestamp="1603351428131">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="662" y="141" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1603045446469" />
-    <state x="698" y="166" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1603167626519" />
+    <state x="698" y="166" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1603351428131" />
     <state x="221" y="75" key="SettingsEditor" timestamp="1602747561519">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -160,9 +164,9 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="376" y="195" key="run.anything.popup/0.0.1440.860@0.0.1440.860" timestamp="1603280229152" />
-    <state x="383" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1602947298601">
+    <state x="383" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1603364362506">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="383" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1440.860@0.0.1440.860" timestamp="1602947298601" />
+    <state x="383" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1440.860@0.0.1440.860" timestamp="1603364362506" />
   </component>
 </project>
