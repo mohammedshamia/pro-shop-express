@@ -6,6 +6,7 @@ import HomePage from "./screens/HomeePage";
 import { Route } from "react-router";
 import ProductPage from "./screens/ProductPage";
 import CartPage from "./screens/CartPage";
+import LoginScreen from "./screens/LoginPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/" component={HomePage} />
           <Route path="/products/:id" component={ProductPage} />
           <Route path="/cart/:id?" component={CartPage} />
+          <Route path="/login" component={LoginScreen} />
         </Container>
       </main>
 

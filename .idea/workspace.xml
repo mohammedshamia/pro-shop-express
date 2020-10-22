@@ -11,17 +11,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99941d3-4d56-4aa9-9806-275bae64002f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/controllers/productController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/controllers/userController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/middleware/authMiddleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/route/userRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/utils/generateWebToken.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/FormContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/redux/user/userActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/redux/user/userConstants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/redux/user/userReducers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/redux/user/userSelectors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/screens/LoginPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/userModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/userModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/route/productRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/route/productRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +106,8 @@
       <workItem from="1603223327754" duration="3890000" />
       <workItem from="1603271441008" duration="18000" />
       <workItem from="1603279606044" duration="4348000" />
-      <workItem from="1603334733042" duration="12743000" />
+      <workItem from="1603334733042" duration="12972000" />
+      <workItem from="1603396183717" duration="4419000" />
     </task>
     <servers />
   </component>
