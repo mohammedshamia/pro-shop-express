@@ -8,6 +8,7 @@ import ProductPage from "./screens/ProductPage";
 import CartPage from "./screens/CartPage";
 import LoginScreen from "./screens/LoginPage";
 import RegisterPage from "./screens/RegisterPage";
+import ProfilePage from "./screens/ProfilePage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/cart/:id?" component={CartPage} />
           <Route path="/login" component={LoginScreen} />
           <Route path="/register" component={RegisterPage} />
+          <Route path="/profile" component={ProfilePage} />
         </Container>
       </main>
 

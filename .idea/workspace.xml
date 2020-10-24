@@ -11,16 +11,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99941d3-4d56-4aa9-9806-275bae64002f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/SearchBox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/screens/RegisterPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/screens/ProfilePage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/route/userRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/route/userRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/redux/user/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/user/userActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/redux/user/userConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/user/userConstants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/redux/user/userReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/user/userReducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/user/userSelectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/user/userSelectors.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +110,8 @@
       <workItem from="1603396183717" duration="4860000" />
       <workItem from="1603460523748" duration="2563000" />
       <workItem from="1603539404514" duration="2315000" />
-      <workItem from="1603549506461" duration="2176000" />
+      <workItem from="1603549506461" duration="2287000" />
+      <workItem from="1603560209467" duration="9142000" />
     </task>
     <servers />
   </component>
