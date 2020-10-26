@@ -4,7 +4,8 @@ import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import colors from "colors";
 import productRoutes from "./route/productRouter.js";
-import userRouter from "./route/userRoute.js";
+import userRoutes from "./route/userRoute.js";
+import orderRoutes from "./route/orderRoute.js";
 import { notFound, errorHandler } from "./middleware/errorMiddelware.js";
 
 const app = express();
@@ -18,13 +19,18 @@ if (process.env.NODE_ENV === "development") {
 
 app.use("/api/products", productRoutes);
 
-app.use("/api/users", userRouter);
+app.use("/api/users", userRoutes);
+
+app.use("/api/orders", orderRoutes);
 
 const port = process.env.PORT || 5000;
 
+// noinspection JSCheckFunctionSignatures
 app.use(notFound);
+// noinspection JSCheckFunctionSignatures
 app.use(errorHandler);
 
+// noinspection JSCheckFunctionSignatures
 app.listen(
   port,
   console.log(`server running on port ${port}`.yellow.underline)
