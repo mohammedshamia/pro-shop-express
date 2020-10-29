@@ -15,6 +15,7 @@ import {
   ORDER_PAY_RESET,
   ORDER_DELIVER_RESET,
 } from "../redux/order/orderConstants";
+import { userInfoSelector } from "../redux/user/userSelectors";
 
 const OrderPage = ({ match, history }) => {
   const orderId = match.params.id;
@@ -32,7 +33,7 @@ const OrderPage = ({ match, history }) => {
   const orderDeliver = useSelector((state) => state.orderDeliver);
   const { loading: loadingDeliver, success: successDeliver } = orderDeliver;
 
-  const userLogin = useSelector((state) => state.userLogin);
+  const userLogin = useSelector(userInfoSelector);
   const { userInfo } = userLogin;
 
   if (!loading) {
@@ -77,7 +78,6 @@ const OrderPage = ({ match, history }) => {
   }, [dispatch, orderId, successPay, successDeliver, order]);
 
   const successPaymentHandler = (paymentResult) => {
-    console.log(paymentResult);
     dispatch(payOrder(orderId, paymentResult));
   };
 
