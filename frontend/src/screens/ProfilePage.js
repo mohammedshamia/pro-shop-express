@@ -11,6 +11,7 @@ import {
 } from "../redux/user/userSelectors";
 import { getUserDetails, updateUserProfile } from "../redux/user/userActions";
 import { USER_UPDATE_PROFILE_RESET } from "../redux/user/userConstants";
+import { listMyOrders } from "../redux/order/orderActions";
 
 const ProfilePage = ({ history }) => {
   const [name, setName] = useState("");
@@ -30,12 +31,8 @@ const ProfilePage = ({ history }) => {
   const userUpdateProfile = useSelector(userUpdateProfileSelector);
   const { success } = userUpdateProfile;
 
-  const orderListMy = {
-    isLoading: "loadingOrders",
-    error: "errorOrders",
-    orders: "orders",
-  }; //useSelector((state) => state.orderListMy);
-  const { isLoading: loadingOrders, error: errorOrders, orders } = orderListMy;
+  const orderListMy = useSelector((state) => state.orderListMy);
+  const { loading: loadingOrders, error: errorOrders, orders } = orderListMy;
 
   useEffect(() => {
     if (!userInfo) {
@@ -44,7 +41,7 @@ const ProfilePage = ({ history }) => {
       if (!user || !user.name || success) {
         dispatch({ type: USER_UPDATE_PROFILE_RESET });
         dispatch(getUserDetails());
-        //dispatch(listMyOrders());
+        dispatch(listMyOrders());
       } else {
         setName(user.name);
         setEmail(user.email);

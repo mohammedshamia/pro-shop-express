@@ -13,11 +13,12 @@
     <list default="true" id="f99941d3-4d56-4aa9-9806-275bae64002f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/controllers/orderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/orderController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/route/orderRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/route/orderRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/order/orderSelectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/order/orderSelectors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/OrderPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/OrderPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/user/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/user/userActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/user/userConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/user/userConstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/user/userReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/user/userReducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/ProfilePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/ProfilePage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +55,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../NejmaApp/nejma-UX" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../NejmaApp/nigma-zoom" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\HP\node_modules\prettier" />
     <property name="run.prettier.on.save" value="true" />
@@ -116,7 +117,8 @@
       <workItem from="1603701858607" duration="14780000" />
       <workItem from="1603809627563" duration="600000" />
       <workItem from="1603878828055" duration="3948000" />
-      <workItem from="1603924227986" duration="3644000" />
+      <workItem from="1603924227986" duration="3703000" />
+      <workItem from="1604047152845" duration="7921000" />
     </task>
     <servers />
   </component>
@@ -151,11 +153,11 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="450" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.860@0.0.1440.860" timestamp="1602947824986" />
-    <state x="698" y="166" key="FileChooserDialogImpl" timestamp="1603635204147">
+    <state x="698" y="166" key="FileChooserDialogImpl" timestamp="1604068217234">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="662" y="141" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1603045446469" />
-    <state x="698" y="166" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1603635204147" />
+    <state x="698" y="166" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1604068217234" />
     <state x="221" y="75" key="SettingsEditor" timestamp="1602747561519">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
