@@ -9,12 +9,13 @@ const HomePage = lazy(() => import("./screens/HomeePage"));
 const ProductPage = lazy(() => import("./screens/ProductPage"));
 const CartPage = lazy(() => import("./screens/CartPage"));
 const LoginScreen = lazy(() => import("./screens/LoginPage"));
-const ProfilePage = lazy(() => import("./screens/RegisterPage"));
+const ProfilePage = lazy(() => import("./screens/ProfilePage"));
 const RegisterPage = lazy(() => import("./screens/RegisterPage"));
 const ShippingPage = lazy(() => import("./screens/ShippingPage"));
 const PaymentPage = lazy(() => import("./screens/PaymentPage"));
 const PlaceOrderPage = lazy(() => import("./screens/PlaceOrder"));
 const OrderPage = lazy(() => import("./screens/OrderPage"));
+const UserListPage = lazy(() => import("./screens/UsersListPage"));
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
             <Route path="/payment" component={PaymentPage} />
             <Route path="/placeorder" component={PlaceOrderPage} />
             <Route path="/order/:id" component={OrderPage} />
+            <Route path="/admin/userlist" component={UserListPage} />
           </Suspense>
         </Container>
       </main>

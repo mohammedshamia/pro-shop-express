@@ -14,6 +14,12 @@ import {
   USER_UPDATE_PROFILE_RESET,
   USER_UPDATE_PROFILE_SUCCESS,
   USER_DETAILS_RESET,
+  USERS_LIST_REQUEST,
+  USERS_LIST_SUCCESS,
+  USERS_LIST_FAIL,
+  USER_DELETE_REQUEST,
+  USER_DELETE_SUCCESS,
+  USER_DELETE_FAIL,
 } from "./userConstants";
 
 export const userAuthReducer = (initialState = {}, action) => {
@@ -99,6 +105,48 @@ export const updateUserProfileReducer = (initialState = {}, action) => {
       return {
         ...initialState,
         isLoading: false,
+        error: action.payload,
+      };
+    default:
+      return initialState;
+  }
+};
+
+export const userListReducer = (initialState = { users: [] }, action) => {
+  switch (action.type) {
+    case USERS_LIST_REQUEST:
+      return {
+        isLoading: true,
+      };
+    case USERS_LIST_SUCCESS:
+      return {
+        isLoading: false,
+        users: action.payload,
+      };
+    case USERS_LIST_FAIL:
+      return {
+        isLoading: false,
+        error: action.payload,
+      };
+    default:
+      return initialState;
+  }
+};
+
+export const deleteUserReducer = (initialState = {}, action) => {
+  switch (action.type) {
+    case USER_DELETE_REQUEST:
+      return {
+        loading: true,
+      };
+    case USER_DELETE_SUCCESS:
+      return {
+        loading: false,
+        success: true,
+      };
+    case USER_DELETE_FAIL:
+      return {
+        loading: false,
         error: action.payload,
       };
     default:
