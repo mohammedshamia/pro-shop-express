@@ -11,11 +11,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99941d3-4d56-4aa9-9806-275bae64002f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/screens/UsersListPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/images/sample.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Paginate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/screens/ProductListPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/screens/UserEditPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/productController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/middleware/authMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/middleware/authMiddleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/route/productRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/route/productRouter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/route/userRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/route/userRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/product/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/product/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/product/productConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/product/productConstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/product/prooductReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/product/prooductReducers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/redux/user/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/user/userActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/redux/user/userConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/user/userConstants.js" afterDir="false" />
@@ -56,7 +65,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../NejmaApp/nejmaBE" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\HP\node_modules\prettier" />
     <property name="run.prettier.on.save" value="true" />
@@ -124,7 +133,9 @@
       <workItem from="1604144112388" duration="5872000" />
       <workItem from="1604184756064" duration="3873000" />
       <workItem from="1604235257500" duration="656000" />
-      <workItem from="1604257959097" duration="4275000" />
+      <workItem from="1604257959097" duration="5013000" />
+      <workItem from="1604308369717" duration="718000" />
+      <workItem from="1604325690173" duration="10040000" />
     </task>
     <servers />
   </component>
@@ -159,11 +170,11 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="450" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.860@0.0.1440.860" timestamp="1602947824986" />
-    <state x="698" y="166" key="FileChooserDialogImpl" timestamp="1604189518601">
+    <state x="698" y="166" key="FileChooserDialogImpl" timestamp="1604334068252">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="662" y="141" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1603045446469" />
-    <state x="698" y="166" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1604189518601" />
+    <state x="698" y="166" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1604334068252" />
     <state x="221" y="75" key="SettingsEditor" timestamp="1602747561519">
       <screen x="0" y="0" width="1440" height="860" />
     </state>

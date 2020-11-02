@@ -16,6 +16,8 @@ const PaymentPage = lazy(() => import("./screens/PaymentPage"));
 const PlaceOrderPage = lazy(() => import("./screens/PlaceOrder"));
 const OrderPage = lazy(() => import("./screens/OrderPage"));
 const UserListPage = lazy(() => import("./screens/UsersListPage"));
+const UserEditPage = lazy(() => import("./screens/UserEditPage"));
+const ProductListPage = lazy(() => import("./screens/ProductListPage"));
 
 function App() {
   return (
@@ -35,6 +37,8 @@ function App() {
             <Route path="/placeorder" component={PlaceOrderPage} />
             <Route path="/order/:id" component={OrderPage} />
             <Route path="/admin/userlist" component={UserListPage} />
+            <Route path="/admin/user/:id/edit" component={UserEditPage} />
+            <Route path="/admin/productlist" component={ProductListPage} />
           </Suspense>
         </Container>
       </main>
