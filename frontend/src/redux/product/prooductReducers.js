@@ -60,19 +60,16 @@ export const productDetailsReducers = (
   switch (action.type) {
     case PRODUCT_DETAILS_REQUEST:
       return {
-        ...initialState,
         isLoading: true,
         product: { reviews: [] },
       };
     case PRODUCT_DETAILS_SUCCESS:
       return {
-        ...initialState,
         isLoading: false,
         product: action.payload,
       };
     case PRODUCT_DETAILS_FAIL:
       return {
-        ...initialState,
         isLoading: false,
         errorMsg: action.payload,
       };

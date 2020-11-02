@@ -18,6 +18,7 @@ const OrderPage = lazy(() => import("./screens/OrderPage"));
 const UserListPage = lazy(() => import("./screens/UsersListPage"));
 const UserEditPage = lazy(() => import("./screens/UserEditPage"));
 const ProductListPage = lazy(() => import("./screens/ProductListPage"));
+const ProductEditPage = lazy(() => import("./screens/ProductEditPage"));
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             <Route path="/order/:id" component={OrderPage} />
             <Route path="/admin/userlist" component={UserListPage} />
             <Route path="/admin/user/:id/edit" component={UserEditPage} />
+            <Route path="/admin/product/:id/edit" component={ProductEditPage} />
             <Route path="/admin/productlist" component={ProductListPage} />
           </Suspense>
         </Container>
