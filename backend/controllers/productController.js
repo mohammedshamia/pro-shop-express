@@ -99,3 +99,23 @@ export const updateProduct = expressAsyncHandler(async (req, res) => {
     throw new Error("Product not found");
   }
 });
+
+// @desc Create new product review
+// @route POST /api/products/:id
+// @access Private
+export const addNewProductReview = expressAsyncHandler(async (req, res) => {
+  const { rating, comment } = req.body;
+
+  const product = await Product.findById(req.params.id);
+
+  if (product) {
+    product.numReviews = ++product.numReviews;
+
+    const updatedProduct = await product.save();
+
+    res.json(updatedProduct);
+  } else {
+    res.status(404);
+    throw new Error("Product not found");
+  }
+});

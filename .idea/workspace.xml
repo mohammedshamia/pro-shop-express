@@ -11,13 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99941d3-4d56-4aa9-9806-275bae64002f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/route/uploadRoutes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/file.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/undefined-1604484782816.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/screens/OrderListPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/orderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/orderController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/productController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/productModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/productModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/route/orderRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/route/orderRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/OrderPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/OrderPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +127,8 @@
       <workItem from="1604308369717" duration="718000" />
       <workItem from="1604325690173" duration="14405000" />
       <workItem from="1604402706519" duration="2250000" />
-      <workItem from="1604474164082" duration="2569000" />
+      <workItem from="1604474164082" duration="3108000" />
+      <workItem from="1604499116002" duration="4675000" />
     </task>
     <servers />
   </component>
