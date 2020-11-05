@@ -29,6 +29,7 @@ function App() {
         <Container>
           <Suspense fallback={<Loader />}>
             <Route exact path="/" component={HomePage} />
+            <Route path="/search/:keyword" component={HomePage} />
             <Route path="/product/:id" component={ProductPage} />
             <Route path="/cart/:id?" component={CartPage} />
             <Route path="/login" component={LoginScreen} />

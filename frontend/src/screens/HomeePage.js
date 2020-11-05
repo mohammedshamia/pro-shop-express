@@ -7,13 +7,14 @@ import { productsListSelector } from "../redux/product/productSelectors";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
 
-const HomePage = () => {
+const HomePage = ({ match }) => {
+  const keyword = match.params.keyword;
   const dispatch = useDispatch();
   const { products, isLoading, error } = useSelector(productsListSelector);
 
   useEffect(() => {
-    dispatch(getProductsList());
-  }, [dispatch]);
+    dispatch(getProductsList(keyword));
+  }, [dispatch, match]);
 
   return (
     <>
