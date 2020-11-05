@@ -5,6 +5,8 @@ import Product from "../models/productModel.js";
 // @route Get /api/products
 // @access Public
 export const getAllProducts = expressAsyncHandler(async (req, res) => {
+  const pageSize = 12;
+  const page = Number(req.query.pageNumber) || 1;
   const keyword = req.query.keyword
     ? {
         name: {
@@ -14,9 +16,12 @@ export const getAllProducts = expressAsyncHandler(async (req, res) => {
       }
     : {};
 
-  const products = await Product.find({ ...keyword });
+  const count = await Product.countDocuments({ ...keyword });
+  const products = await Product.find({ ...keyword })
+    .limit(pageSize)
+    .skip(pageSize * (page - 1));
 
-  res.json(products);
+  res.json({ products, page, pages: Math.ceil(count / pageSize) });
 });
 
 // @desc Fetch a single product
@@ -149,4 +154,13 @@ export const addNewProductReview = expressAsyncHandler(async (req, res) => {
     res.status(404);
     throw new Error("Product not found");
   }
+});
+
+// @desc Fetch top products
+// @route Get /api/products/top
+// @access Public
+export const getTopRatedProducts = expressAsyncHandler(async (req, res) => {
+  const products = await Product.find({}).sort({ rating: -1 }).limit(3);
+
+  res.json(products);
 });

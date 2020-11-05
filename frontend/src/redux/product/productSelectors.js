@@ -9,6 +9,8 @@ export const productsListSelector = createSelector(
     products: productList.products,
     isLoading: productList.isLoading,
     error: productList.errorMsg,
+    pages: productList.pages,
+    page: productList.page,
   })
 );
 

@@ -6,18 +6,33 @@ import { getProductsList } from "../redux/product/actions";
 import { productsListSelector } from "../redux/product/productSelectors";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
+import Paginate from "../components/Paginate";
+import { Link } from "react-router-dom";
+import ProductCarousel from "../components/ProductCarousel";
+import Meta from "../components/Meta";
 
 const HomePage = ({ match }) => {
   const keyword = match.params.keyword;
+  const pageNumber = match.params.pageNumber || 1;
   const dispatch = useDispatch();
-  const { products, isLoading, error } = useSelector(productsListSelector);
+  const { products, isLoading, error, pages, page } = useSelector(
+    productsListSelector
+  );
 
   useEffect(() => {
-    dispatch(getProductsList(keyword));
-  }, [dispatch, match]);
+    dispatch(getProductsList(keyword, pageNumber));
+  }, [dispatch, keyword, pageNumber]);
 
   return (
     <>
+      <Meta />
+      {!keyword ? (
+        <ProductCarousel />
+      ) : (
+        <Link to="/" className="btn btn-light">
+          Go Back
+        </Link>
+      )}
       <h1>Latest Products</h1>
       <Row>
         {isLoading && <Loader>Loading...</Loader>}
@@ -30,6 +45,7 @@ const HomePage = ({ match }) => {
           </Col>
         ))}
       </Row>
+      <Paginate pages={pages} page={page} keyword={keyword ? keyword : ""} />
     </>
   );
 };

@@ -20,6 +20,7 @@ import Loader from "../components/Loader";
 import Message from "../components/Message";
 import { userInfoSelector } from "../redux/user/userSelectors";
 import { PRODUCT_CREATE_REVIEW_RESET } from "../redux/product/productConstants";
+import Meta from "../components/Meta";
 
 const ProductPage = ({ match, history }) => {
   const [qty, setQty] = useState(1);
@@ -68,6 +69,7 @@ const ProductPage = ({ match, history }) => {
 
   return (
     <>
+      <Meta title={product.name} />
       <Link className="btn btn-light my-3" to="/">
         Go Back
       </Link>

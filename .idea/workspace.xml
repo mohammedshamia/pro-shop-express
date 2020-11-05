@@ -11,15 +11,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99941d3-4d56-4aa9-9806-275bae64002f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Meta.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/ProductCarousel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/controllers/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/productController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/route/productRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/route/productRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/SearchBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/SearchBox.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/redux/product/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/product/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/product/productSelectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/product/productSelectors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/product/prooductReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/product/prooductReducers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/screens/HomeePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/HomeePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/ProductPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/ProductPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/ProductListPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/ProductListPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +134,9 @@
       <workItem from="1604402706519" duration="2250000" />
       <workItem from="1604474164082" duration="3108000" />
       <workItem from="1604499116002" duration="5128000" />
-      <workItem from="1604530907557" duration="4048000" />
+      <workItem from="1604530907557" duration="4216000" />
+      <workItem from="1604599725349" duration="1200000" />
+      <workItem from="1604607954091" duration="4764000" />
     </task>
     <servers />
   </component>

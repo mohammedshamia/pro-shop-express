@@ -6,6 +6,7 @@ import {
   createProduct,
   updateProduct,
   addNewProductReview,
+  getTopRatedProducts,
 } from "../controllers/productController.js";
 import { protect, protectAdminRoute } from "../middleware/authMiddleware.js";
 
@@ -18,6 +19,8 @@ router
   .route("/")
   .get(getAllProducts)
   .post(protect, protectAdminRoute, createProduct);
+
+router.route("/top").get(getTopRatedProducts);
 
 // @desc Fetch a single product
 // @route Get /api/products/:id

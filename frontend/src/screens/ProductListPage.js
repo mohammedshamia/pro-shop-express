@@ -11,13 +11,14 @@ import {
   getProductsList,
 } from "../redux/product/actions";
 import { PRODUCT_CREATE_RESET } from "../redux/product/productConstants";
+import { productsListSelector } from "../redux/product/productSelectors";
 
 const ProductListPage = ({ history, match }) => {
   const pageNumber = match.params.pageNumber || 1;
 
   const dispatch = useDispatch();
 
-  const productList = useSelector((state) => state.productList);
+  const productList = useSelector(productsListSelector);
   const { loading, error, products, page, pages } = productList;
 
   const productDelete = useSelector((state) => state.productDelete);

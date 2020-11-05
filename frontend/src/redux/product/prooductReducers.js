@@ -40,7 +40,9 @@ export const productListReducers = (
       return {
         ...initialState,
         isLoading: false,
-        products: action.payload,
+        products: action.payload.products,
+        pages: action.payload.pages,
+        page: action.payload.page,
       };
     case PRODUCT_LIST_FAIL:
       return {
