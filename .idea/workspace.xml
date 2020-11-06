@@ -11,9 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99941d3-4d56-4aa9-9806-275bae64002f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/LoginPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +126,7 @@
       <workItem from="1604530907557" duration="4216000" />
       <workItem from="1604599725349" duration="1200000" />
       <workItem from="1604607954091" duration="6098000" />
-      <workItem from="1604672839649" duration="3464000" />
+      <workItem from="1604672839649" duration="4758000" />
     </task>
     <servers />
   </component>
@@ -154,10 +153,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="174" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860@0.0.1440.860" timestamp="1602747024078" />
-    <state x="479" y="232" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603142789893">
+    <state x="479" y="232" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604682149242">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="479" y="232" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.860@0.0.1440.860" timestamp="1603142789893" />
+    <state x="479" y="232" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.860@0.0.1440.860" timestamp="1604682149242" />
     <state x="450" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602947824986">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -175,10 +174,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1440.860@0.0.1440.860" timestamp="1604268517338" />
-    <state x="427" y="163" width="585" height="534" key="find.popup" timestamp="1603930920622">
+    <state x="427" y="163" width="585" height="534" key="find.popup" timestamp="1604682921060">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="427" y="163" width="585" height="534" key="find.popup/0.0.1440.860@0.0.1440.860" timestamp="1603930920622" />
+    <state x="427" y="163" width="585" height="534" key="find.popup/0.0.1440.860@0.0.1440.860" timestamp="1604682921060" />
     <state x="376" y="195" key="run.anything.popup" timestamp="1603280229152">
       <screen x="0" y="0" width="1440" height="860" />
     </state>

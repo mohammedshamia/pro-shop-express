@@ -60,7 +60,6 @@ const LoginScreen = ({ location, history }) => {
           Sign In
         </Button>
       </Form>
-
       <Row className="py-3">
         <Col>
           New Customer?{" "}
@@ -68,6 +67,25 @@ const LoginScreen = ({ location, history }) => {
             Register
           </Link>
         </Col>
+      </Row>
+      <Row>
+        <h5>To log in as admin use </h5>{" "}
+      </Row>
+      <Row>
+        {" "}
+        <h6>admin@example.com</h6>
+      </Row>{" "}
+      <Row>
+        <h5>To log in as customer use </h5>
+      </Row>
+      <Row>
+        <h6>john@example.com</h6>
+      </Row>
+      <Row>
+        <h5>Password</h5>
+      </Row>
+      <Row>
+        <h6>123456</h6>
       </Row>
     </FormContainer>
   );
