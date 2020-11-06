@@ -11,65 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99941d3-4d56-4aa9-9806-275bae64002f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/build/asset-manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/images/airpods.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/images/alexa.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/images/camera.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/images/mouse.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/images/phone.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/images/playstation.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/images/sample.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/precache-manifest.c2c6b36dc6a5207fc27e3af5ec3d70c4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/service-worker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/css/main.1ebfc5fa.chunk.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/css/main.1ebfc5fa.chunk.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/0.0553ba93.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/0.0553ba93.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/10.5c7ade07.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/10.5c7ade07.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/11.be5c9bc6.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/11.be5c9bc6.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/12.d2571df7.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/12.d2571df7.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/13.40e067dc.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/13.40e067dc.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/14.75c2f8fd.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/14.75c2f8fd.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/15.f39b7601.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/15.f39b7601.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/16.f23bd879.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/16.f23bd879.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/17.87cfc95a.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/17.87cfc95a.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/18.8f2be538.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/18.8f2be538.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/3.b6d751ea.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/3.b6d751ea.chunk.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/3.b6d751ea.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/4.36d26a4e.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/4.36d26a4e.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/5.9f9d81e6.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/5.9f9d81e6.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/6.0d16528e.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/6.0d16528e.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/7.b4d224ca.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/7.b4d224ca.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/8.a7207c37.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/8.a7207c37.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/9.f5a9de0b.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/9.f5a9de0b.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/main.cd0f4d9a.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/main.cd0f4d9a.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/runtime-main.556d873a.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/build/static/js/runtime-main.556d873a.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +125,7 @@
       <workItem from="1604530907557" duration="4216000" />
       <workItem from="1604599725349" duration="1200000" />
       <workItem from="1604607954091" duration="6098000" />
-      <workItem from="1604672839649" duration="2442000" />
+      <workItem from="1604672839649" duration="2546000" />
     </task>
     <servers />
   </component>
