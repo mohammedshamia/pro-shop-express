@@ -6,7 +6,8 @@ import generateWebToken from "../utils/generateWebToken.js";
 // @route Get /api/users/login
 // @access Public
 export const authUser = expressAsyncHandler(async (req, res) => {
-  const { email, password } = req.body;
+  const { email: loginEmail, password } = req.body;
+  const email=loginEmail.toLowerCase()
   const user = await User.findOne({ email });
 
   if (user && (await user.matchPassword(password))) {
@@ -27,8 +28,8 @@ export const authUser = expressAsyncHandler(async (req, res) => {
 // @route Get /api/users/login
 // @access Public
 export const registerUser = expressAsyncHandler(async (req, res) => {
-  const { name, email, password } = req.body;
-
+  const { name, email:loginEmail, password } = req.body;
+  const email=loginEmail.toLowerCase()
   const userExists = await User.findOne({ email });
 
   if (userExists) {
@@ -80,10 +81,10 @@ export const getUserProfile = expressAsyncHandler(async (req, res) => {
 // @access Private
 export const updateUserProfile = expressAsyncHandler(async (req, res) => {
   const user = await User.findById(req.user._id);
-
+  const email= req.body.email.toLowerCase()
   if (user) {
     user.name = req.body.name || user.name;
-    user.email = req.body.email || user.email;
+    user.email =email || user.email;
     req.body.password && (user.password = req.body.password);
 
     const updatedUser = await user.save();
