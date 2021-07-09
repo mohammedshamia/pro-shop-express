@@ -9,8 +9,14 @@ import orderRoutes from "./route/orderRoute.js";
 import uploadRoutes from "./route/uploadRoutes.js";
 import { notFound, errorHandler } from "./middleware/errorMiddelware.js";
 import path from "path";
+import cors from "cors";
 
 const app = express();
+
+
+/** Access-Control-Allow-Origin */
+app.use(cors());
+
 dotenv.config({ path: "backend/.env" });
 connectDB();
 app.use(express.json());
