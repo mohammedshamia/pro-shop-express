@@ -4,7 +4,7 @@ import {
   addProductReviewSchema,
   addProductSchema,
   validator,
-} from "../utils/validations";
+} from "../utils/validations/index.js";
 
 // @desc Fetch all products
 // @route Get /api/products

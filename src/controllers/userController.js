@@ -7,9 +7,9 @@ import {
   registerSchema,
   updateProfileSchema,
   validator,
-} from "../utils/validations";
-import Product from "../models/productModel";
-import getUserObject from "../utils/getUserObject";
+} from "../utils/validations/index.js";
+import Product from "../models/productModel.js";
+import getUserObject from "../utils/getUserObject.js";
 
 // @desc Auth user and get token
 // @route Get /api/users/login

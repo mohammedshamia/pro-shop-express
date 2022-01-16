@@ -1,10 +1,10 @@
-import { registerSchema } from "./userValidations/registerSchema";
-import { updateProfileSchema } from "./userValidations/updateProfileSchema";
-import { addCartItemSchema } from "./userValidations/addCartItemSchema";
-import { loginSchema } from "./userValidations/loginSchema";
-import { addProductSchema } from "./productValidations/addProductSchema";
-import { addProductReviewSchema } from "./productValidations/addProductReviewSchema";
-import { validator } from "./validator";
+import { registerSchema } from "./userValidations/registerSchema.js";
+import { updateProfileSchema } from "./userValidations/updateProfileSchema.js";
+import { addCartItemSchema } from "./userValidations/addCartItemSchema.js";
+import { loginSchema } from "./userValidations/loginSchema.js";
+import { addProductSchema } from "./productValidations/addProductSchema.js";
+import { addProductReviewSchema } from "./productValidations/addProductReviewSchema.js";
+import { validator } from "./validator.js";
 
 export {
   registerSchema,
