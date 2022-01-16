@@ -1,6 +1,7 @@
-import { registerSchema } from "./authValidations/registerSchema";
-import { updateProfileSchema } from "./authValidations/updateProfileSchema";
-import { loginSchema } from "./authValidations/loginSchema";
+import { registerSchema } from "./userValidations/registerSchema";
+import { updateProfileSchema } from "./userValidations/updateProfileSchema";
+import { addCartItemSchema } from "./userValidations/addCartItemSchema";
+import { loginSchema } from "./userValidations/loginSchema";
 import { addProductSchema } from "./productValidations/addProductSchema";
 import { addProductReviewSchema } from "./productValidations/addProductReviewSchema";
 import { validator } from "./validator";
@@ -12,4 +13,5 @@ export {
   updateProfileSchema,
   addProductSchema,
   addProductReviewSchema,
+  addCartItemSchema,
 };

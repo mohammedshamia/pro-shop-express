@@ -14,130 +14,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99941d3-4d56-4aa9-9806-275bae64002f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.prettier.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/db.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/orderController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/productController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/userController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/products.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/users.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middleware/authMiddleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middleware/errorMiddelware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/orderModel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/productModel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/userModel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/route/orderRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/route/productRouter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/route/uploadRoutes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/route/userRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/seeder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/generateWebToken.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/validations/authValidations/loginSchema.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/validations/authValidations/registerSchema.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/validations/authValidations/updateProfileSchema.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/validations/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/validations/productValidations/addProductReviewSchema.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/validations/productValidations/addProductSchema.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/validations/validator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/getUserObject.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/validations/userValidations/updateProfileSchema.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.prettier.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config/db.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/orderController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/productController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/userController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/data/products.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/data/users.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/middleware/authMiddleware.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/middleware/errorMiddelware.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/orderModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/productModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/userModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/route/orderRoute.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/route/productRouter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/route/uploadRoutes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/route/userRoute.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/seeder.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/utils/generateWebToken.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.idea/frontend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.prettier.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/debug.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/airpods.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/alexa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/camera.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/mouse.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/phone.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/playstation.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/sample.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/CheckoutSteps.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/FormContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Loader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Message.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Meta.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Paginate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Product.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ProductCarousel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Rating.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/SearchBox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/cart/cartActions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/cart/cartConstants.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/cart/cartReducers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/cart/cartSelectors.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/order/orderActions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/order/orderConstants.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/order/orderReducers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/order/orderSelectors.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/product/actions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/product/productConstants.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/product/productSelectors.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/product/prooductReducers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/store.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/user/userActions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/user/userConstants.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/user/userReducers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/user/userSelectors.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/CartPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/HomeePage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/LoginPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/OrderListPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/OrderPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/PaymentPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/PlaceOrder.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/ProductEditPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/ProductListPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/ProductPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/ProfilePage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/RegisterPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/ShippingPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/UserEditPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/UsersListPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/serviceWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/productController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/productModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/productModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/userModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/userModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/route/userRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/userRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/validations/authValidations/loginSchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validations/userValidations/loginSchema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/validations/authValidations/registerSchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validations/userValidations/registerSchema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/validations/authValidations/updateProfileSchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validations/userValidations/addCartItemSchema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/validations/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validations/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/validations/productValidations/addProductSchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validations/productValidations/addProductSchema.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +63,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/utils/validations/productValidations" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/utils/validations/userValidations" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -187,6 +76,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\BRAVO\Desktop\GGateway\React Bootcamp\pro-shop\src\utils\validations\userValidations" />
       <recent name="C:\Users\BRAVO\Desktop\GGateway\React Bootcamp\pro-shop\src\utils\validations\productValidations" />
       <recent name="C:\Users\BRAVO\Desktop\GGateway\React Bootcamp\pro-shop\src\utils\validations" />
       <recent name="C:\Users\BRAVO\Desktop\GGateway\React Bootcamp\pro-shop" />
@@ -263,7 +153,7 @@
       <workItem from="1604672839649" duration="4758000" />
       <workItem from="1642283153229" duration="187000" />
       <workItem from="1642283390585" duration="3259000" />
-      <workItem from="1642346975380" duration="7101000" />
+      <workItem from="1642346975380" duration="13087000" />
     </task>
     <servers />
   </component>

@@ -1,8 +1,9 @@
 import * as yup from "yup";
 
 export const addProductSchema = yup.object().shape({
-  countInStock: yup.number().min(0),
-  price: yup.number().min(0),
+  countInStock: yup.number().min(0).required("count In Stock is required"),
+  discount: yup.number().min(0).required("discount is required"),
+  price: yup.number().min(0).required("price is required"),
   description: yup.string().required("Description is required"),
   name: yup.string().required("Name is required"),
   brand: yup.string().required("Brand is required"),

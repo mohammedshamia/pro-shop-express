@@ -2,11 +2,14 @@ import expressAsyncHandler from "express-async-handler";
 import User from "../models/userModel.js";
 import generateWebToken from "../utils/generateWebToken.js";
 import {
+  addCartItemSchema,
   loginSchema,
   registerSchema,
   updateProfileSchema,
   validator,
 } from "../utils/validations";
+import Product from "../models/productModel";
+import getUserObject from "../utils/getUserObject";
 
 // @desc Auth user and get token
 // @route Get /api/users/login
@@ -18,16 +21,11 @@ export const authUser = expressAsyncHandler(async (req, res) => {
   const user = await User.findOne({ email });
 
   if (user && (await user.matchPassword(password))) {
-    res.json({
-      _id: user._id,
-      firstName: user.firstName,
-      lastName: user.lastName,
-      email: user.email,
-      isAdmin: user.isAdmin,
-      profileImage: user.profileImage,
-      dateOfBirth: user.dateOfBirth,
-      token: generateWebToken(user._id),
-    });
+    res.json(
+      getUserObject(user, {
+        token: generateWebToken(user._id),
+      })
+    );
   } else {
     res.status(401);
     throw new Error("Invalid email or password");
@@ -56,16 +54,11 @@ export const registerUser = expressAsyncHandler(async (req, res) => {
   });
 
   if (user) {
-    res.status(201).json({
-      _id: user._id,
-      firstName: user.firstName,
-      lastName: user.lastName,
-      email: user.email,
-      isAdmin: user.isAdmin,
-      profileImage: user.profileImage,
-      dateOfBirth: user.dateOfBirth,
-      token: generateWebToken(user._id),
-    });
+    res.status(201).json(
+      getUserObject(user, {
+        token: generateWebToken(user._id),
+      })
+    );
   } else {
     res.status(400);
     throw new Error("Invalid user data");
@@ -79,13 +72,7 @@ export const getUserProfile = expressAsyncHandler(async (req, res) => {
   const user = await User.findById(req.user._id);
 
   if (user) {
-    res.json({
-      _id: user._id,
-      firstName: user.firstName,
-      lastName: user.lastName,
-      email: user.email,
-      isAdmin: user.isAdmin,
-    });
+    res.json(getUserObject(user));
   } else {
     res.status(404);
     throw new Error("User not found");
@@ -108,16 +95,11 @@ export const updateUserProfile = expressAsyncHandler(async (req, res) => {
     req.body.password && (user.password = req.body.password);
 
     const updatedUser = await user.save();
-    res.json({
-      _id: updatedUser._id,
-      firstName: user.firstName,
-      lastName: user.lastName,
-      profileImage: user.profileImage,
-      dateOfBirth: user.dateOfBirth,
-      email: updatedUser.email,
-      isAdmin: updatedUser.isAdmin,
-      token: generateWebToken(updatedUser._id),
-    });
+    res.json(
+      getUserObject(updatedUser, {
+        token: generateWebToken(updatedUser._id),
+      })
+    );
   } else {
     res.status(404);
     throw new Error("User not found");
@@ -174,15 +156,109 @@ export const updateUser = expressAsyncHandler(async (req, res) => {
     user.isAdmin = req.body.isAdmin || req.body.isAdmin;
     const updatedUser = await user.save();
 
-    res.json({
-      _id: updatedUser._id,
-      firstName: user.firstName,
-      lastName: user.lastName,
-      profileImage: user.profileImage,
-      dateOfBirth: user.dateOfBirth,
-      email: updatedUser.email,
-      isAdmin: updatedUser.isAdmin,
-    });
+    res.json(getUserObject(updatedUser));
+  } else {
+    res.status(404);
+    throw new Error("User not found");
+  }
+});
+
+// @desc  Add cart item
+// @route PUT /api/users/profile/cart
+// @access Private
+export const addCartItem = expressAsyncHandler(async (req, res) => {
+  await validator(addCartItemSchema, req.body);
+
+  const user = await User.findById(req.user._id);
+  const { qty, productId } = req.body;
+  if (user) {
+    const product = await Product.find(productId);
+    if (product && product.countInStock > qty) {
+      const itemTotalPrice = product.discount
+        ? (product.price - product.discount) * qty
+        : qty * product.price;
+
+      if (user.cart) {
+        const cartItems = user.cart.items.filter(
+          (i) => i.product._id !== productId
+        );
+        user.cart = {
+          items: [
+            {
+              product: productId,
+              qty: qty,
+              itemTotalPrice,
+            },
+            ...cartItems,
+          ],
+          totalQty: user.cart.totalQty + qty,
+          totalPrice: user.cart.totalPrice + itemTotalPrice,
+        };
+      } else {
+        user.cart = {
+          items: [
+            {
+              product: productId,
+              qty: qty,
+              itemTotalPrice,
+            },
+          ],
+          totalQty: qty,
+          totalPrice: itemTotalPrice,
+        };
+      }
+    } else {
+      if (!product) {
+        res.status(404);
+        throw new Error("Product not found");
+      } else {
+        res.status(400);
+        throw new Error("Quantity greater than count in stock");
+      }
+    }
+
+    const updatedUser = await user.save();
+    res.json(
+      getUserObject(updatedUser, {
+        token: generateWebToken(updatedUser._id),
+      })
+    );
+  } else {
+    res.status(404);
+    throw new Error("User not found");
+  }
+});
+
+// @desc  Delete cart item
+// @route DELETE /api/users/profile/cart?productId
+// @access Private
+export const deleteCartItem = expressAsyncHandler(async (req, res) => {
+  const user = await User.findById(req.user._id);
+  const { productId } = req.params;
+  if (user) {
+    const product = await Product.find(productId);
+    if (product) {
+      if (user.cart) {
+        const cartItems = user.cart.items.filter(
+          (i) => i.product._id !== productId
+        );
+        const deletedItem = user.cart.items.find(
+          (i) => i.product._id === productId
+        );
+        user.cart = {
+          items: cartItems,
+          totalQty: user.cart.totalQty - deletedItem.qty,
+          totalPrice: user.cart.totalPrice - deletedItem.itemTotalPrice,
+        };
+      }
+    } else {
+      res.status(404);
+      throw new Error("Product not found");
+    }
+
+    const updatedUser = await user.save();
+
+    res.json(getUserObject(updatedUser));
   } else {
     res.status(404);
     throw new Error("User not found");

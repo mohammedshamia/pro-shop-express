@@ -90,6 +90,7 @@ export const createProduct = expressAsyncHandler(async (req, res) => {
     await validator(addProductSchema, req.body);
     const product = new Product({
       name: req.body.name,
+      discount: req.body.discount,
       price: req.body.price,
       user: req.user._id,
       images: req.body.images,
@@ -121,6 +122,7 @@ export const updateProduct = expressAsyncHandler(async (req, res) => {
     category,
     countInStock,
     numReviews,
+    discount,
     images,
     description,
     categories,
@@ -131,6 +133,7 @@ export const updateProduct = expressAsyncHandler(async (req, res) => {
 
   if (product) {
     product.name = name || product.name;
+    product.discount = discount || product.discount;
     product.price = price || product.price;
     product.brand = brand || product.brand;
     product.category = category || product.category;
