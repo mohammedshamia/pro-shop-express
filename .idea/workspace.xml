@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -11,8 +14,130 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99941d3-4d56-4aa9-9806-275bae64002f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.prettier.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/config/db.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/orderController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/productController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/userController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/products.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/users.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/middleware/authMiddleware.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/middleware/errorMiddelware.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/orderModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/productModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/userModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/route/orderRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/route/productRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/route/uploadRoutes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/route/userRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/seeder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/generateWebToken.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/validations/authValidations/loginSchema.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/validations/authValidations/registerSchema.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/validations/authValidations/updateProfileSchema.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/validations/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/validations/productValidations/addProductReviewSchema.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/validations/productValidations/addProductSchema.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/validations/validator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/LoginPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.prettier.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config/db.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/orderController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/productController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/userController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/data/products.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/data/users.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/middleware/authMiddleware.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/middleware/errorMiddelware.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/orderModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/productModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/userModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/route/orderRoute.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/route/productRouter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/route/uploadRoutes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/route/userRoute.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/seeder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/generateWebToken.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.idea/frontend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.prettier.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/debug.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/images/airpods.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/images/alexa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/images/camera.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/images/mouse.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/images/phone.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/images/playstation.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/images/sample.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/CheckoutSteps.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/FormContainer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Loader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Message.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Meta.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Paginate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Product.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ProductCarousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Rating.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/SearchBox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/cart/cartActions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/cart/cartConstants.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/cart/cartReducers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/cart/cartSelectors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/order/orderActions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/order/orderConstants.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/order/orderReducers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/order/orderSelectors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/product/actions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/product/productConstants.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/product/productSelectors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/product/prooductReducers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/user/userActions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/user/userConstants.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/user/userReducers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/user/userSelectors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/CartPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/HomeePage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/LoginPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/OrderListPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/OrderPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/PaymentPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/PlaceOrder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/ProductEditPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/ProductListPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/ProductPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/ProfilePage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/RegisterPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/ShippingPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/UserEditPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/UsersListPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/serviceWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,20 +174,29 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../NejmaApp/nejma-UX" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/utils/validations/productValidations" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\HP\node_modules\prettier" />
-    <property name="run.prettier.on.save" value="true" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\BRAVO\Desktop\GGateway\React Bootcamp\pro-shop\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\BRAVO\Desktop\GGateway\React Bootcamp\pro-shop\src\utils\validations\productValidations" />
+      <recent name="C:\Users\BRAVO\Desktop\GGateway\React Bootcamp\pro-shop\src\utils\validations" />
+      <recent name="C:\Users\BRAVO\Desktop\GGateway\React Bootcamp\pro-shop" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\BRAVO\Desktop\GGateway\React Bootcamp\pro-shop\src\utils\validations\authValidations" />
       <recent name="C:\Users\HP\Desktop\projects\pro-shop" />
       <recent name="C:\Users\HP\Desktop\projects\pro-shop\frontend\src\redux" />
       <recent name="C:\Users\HP\Desktop\projects\pro-shop\frontend\src" />
       <recent name="C:\Users\HP\Desktop\projects\pro-shop\backend" />
-      <recent name="C:\Users\HP\Desktop\projects\pro-shop\backend\data" />
     </key>
   </component>
   <component name="RunManager">
@@ -127,6 +261,9 @@
       <workItem from="1604599725349" duration="1200000" />
       <workItem from="1604607954091" duration="6098000" />
       <workItem from="1604672839649" duration="4758000" />
+      <workItem from="1642283153229" duration="187000" />
+      <workItem from="1642283390585" duration="3259000" />
+      <workItem from="1642346975380" duration="7101000" />
     </task>
     <servers />
   </component>
@@ -148,43 +285,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="174" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602747024078">
-      <screen x="0" y="0" width="1440" height="860" />
-    </state>
-    <state x="174" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.860@0.0.1440.860" timestamp="1602747024078" />
-    <state x="479" y="232" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604682149242">
-      <screen x="0" y="0" width="1440" height="860" />
-    </state>
-    <state x="479" y="232" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.860@0.0.1440.860" timestamp="1604682149242" />
-    <state x="450" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602947824986">
-      <screen x="0" y="0" width="1440" height="860" />
-    </state>
-    <state x="450" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.860@0.0.1440.860" timestamp="1602947824986" />
-    <state x="698" y="166" key="FileChooserDialogImpl" timestamp="1604410953795">
-      <screen x="0" y="0" width="1440" height="860" />
-    </state>
-    <state x="662" y="141" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1603045446469" />
-    <state x="698" y="166" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1604410953795" />
-    <state x="221" y="75" key="SettingsEditor" timestamp="1602747561519">
-      <screen x="0" y="0" width="1440" height="860" />
-    </state>
-    <state x="221" y="75" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1602747561519" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1604268517338">
-      <screen x="0" y="0" width="1440" height="860" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1440.860@0.0.1440.860" timestamp="1604268517338" />
-    <state x="427" y="163" width="585" height="534" key="find.popup" timestamp="1604682921060">
-      <screen x="0" y="0" width="1440" height="860" />
-    </state>
-    <state x="427" y="163" width="585" height="534" key="find.popup/0.0.1440.860@0.0.1440.860" timestamp="1604682921060" />
-    <state x="376" y="195" key="run.anything.popup" timestamp="1603280229152">
-      <screen x="0" y="0" width="1440" height="860" />
-    </state>
-    <state x="376" y="195" key="run.anything.popup/0.0.1440.860@0.0.1440.860" timestamp="1603280229152" />
-    <state x="383" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1603364362506">
-      <screen x="0" y="0" width="1440" height="860" />
-    </state>
-    <state x="383" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1440.860@0.0.1440.860" timestamp="1603364362506" />
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
