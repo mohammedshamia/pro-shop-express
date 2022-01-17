@@ -31,27 +31,34 @@ const userSchema = mongoose.Schema(
     },
     dateOfBirth: {
       type: Date,
-      required: true,
+      required: false,
     },
     cart: {
-      items: [
-        {
-          itemTotalPrice: { type: Number, required: true },
-          qty: { type: Number, required: true },
-          product: {
-            type: mongoose.Schema.Types.ObjectId,
-            required: true,
-            ref: "Product",
+      type: {
+        items: [
+          {
+            itemTotalPrice: { type: Number, required: true },
+            qty: { type: Number, required: true },
+            product: {
+              type: mongoose.Schema.Types.ObjectId,
+              required: true,
+              ref: "Product",
+            },
           },
+        ],
+        totalPrice: {
+          type: Number,
+          required: true,
         },
-      ],
-      totalPrice: {
-        type: Number,
-        required: true,
+        totalQty: {
+          type: Number,
+          required: true,
+        },
       },
-      totalQty: {
-        type: Number,
-        required: true,
+      default: {
+        items: [],
+        totalQty: 0,
+        totalPrice: 0,
       },
     },
   },
