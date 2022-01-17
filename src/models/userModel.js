@@ -14,6 +14,7 @@ const userSchema = mongoose.Schema(
     profileImage: {
       type: String,
       required: false,
+      default: "",
     },
     email: {
       type: String,
@@ -31,7 +32,8 @@ const userSchema = mongoose.Schema(
     },
     dateOfBirth: {
       type: Date,
-      required: false,
+      required: true,
+      default: Date.now(),
     },
     cart: {
       type: {

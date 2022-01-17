@@ -454,25 +454,29 @@
     "User": {
       "type": "object",
       "properties": {
-        "user": {
-          "type": "object",
-          "properties": {
-            "_id": {
-              "type": "string"
-            },
-            "firstName": {
-              "type": "string"
-            },
-            "lastName": {
-              "type": "string"
-            },
-            "email": {
-              "type": "string"
-            },
-            "isAdmin": {
-              "type": "boolean"
-            }
-          }
+        "_id": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "profileImage": {
+          "type": "string"
+        },
+        "dateOfBirth": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "isAdmin": {
+          "type": "boolean"
+        },
+        "cart": {
+          "type": "object"
         },
         "token": {
           "type": "string"
