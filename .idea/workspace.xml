@@ -14,10 +14,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99941d3-4d56-4aa9-9806-275bae64002f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/swagger.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/productController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/validations/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validations/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/route/userRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/userRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +56,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/utils/validations/userValidations" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -67,6 +69,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\BRAVO\Desktop\GGateway\React Bootcamp\pro-shop\src" />
       <recent name="C:\Users\BRAVO\Desktop\GGateway\React Bootcamp\pro-shop\src\utils\validations\userValidations" />
       <recent name="C:\Users\BRAVO\Desktop\GGateway\React Bootcamp\pro-shop\src\utils\validations\productValidations" />
       <recent name="C:\Users\BRAVO\Desktop\GGateway\React Bootcamp\pro-shop\src\utils\validations" />
@@ -144,7 +147,7 @@
       <workItem from="1604672839649" duration="4758000" />
       <workItem from="1642283153229" duration="187000" />
       <workItem from="1642283390585" duration="3259000" />
-      <workItem from="1642346975380" duration="14409000" />
+      <workItem from="1642346975380" duration="16984000" />
     </task>
     <servers />
   </component>

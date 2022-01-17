@@ -1,0 +1,486 @@
+{
+  "info": {
+    "version": "1.0.0",
+    "title": "proshop-express-app",
+    "description": "Proshop App Server"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/api/users/login": {
+      "post": {
+        "tags": ["Auth"],
+        "summary": "Login user to the system",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Login User Object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserLogin"
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          },
+          "404": {
+            "description": "Failed. User not found"
+          }
+        }
+      }
+    },
+    "/api/users/signup": {
+      "post": {
+        "tags": ["Auth"],
+        "summary": "Register user to the system",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Register User Object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserRegister"
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          }
+        }
+      }
+    },
+
+    "/api/users/profile": {
+      "get": {
+        "tags": ["User"],
+        "summary": "Get User Profile",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "authorization",
+            "description": "Bearer Token",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          }
+        }
+      },
+      "put": {
+        "tags": ["User"],
+        "summary": "Get User Profile",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Update profile body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateProfileReq"
+            }
+          },
+
+          {
+            "in": "header",
+            "name": "authorization",
+            "description": "Bearer Token",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          }
+        }
+      }
+    },
+
+    "/api/users/profile/cart": {
+      "put": {
+        "tags": ["User"],
+        "summary": "Add cart item",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Cart item body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CartItem"
+            }
+          },
+
+          {
+            "in": "header",
+            "name": "authorization",
+            "description": "Bearer Token",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          }
+        }
+      },
+      "delete": {
+        "tags": ["User"],
+        "summary": "Get User Profile",
+        "parameters": [
+          {
+            "name": "productId",
+            "in": "query",
+            "description": "Product Id",
+            "required": true,
+            "type": "string"
+          },
+
+          {
+            "in": "header",
+            "name": "authorization",
+            "description": "Bearer Token",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          }
+        }
+      }
+    },
+
+    "/api/users": {
+      "get": {
+        "tags": ["Admin"],
+        "summary": "Users Details",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "authorization",
+            "description": "Bearer Token",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "401": {
+            "description": "Failed. Not Authorized."
+          }
+        }
+      }
+    },
+    "/api/users/{id}": {
+      "get": {
+        "tags": ["Admin"],
+        "summary": "User Details",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "User ID",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "header",
+            "name": "authorization",
+            "description": "Bearer Token",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          },
+          "404": {
+            "description": "Failed. Not Found"
+          }
+        }
+      },
+      "put": {
+        "tags": ["Admin"],
+        "summary": "User Details",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "User Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Profile References Body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateProfileReq"
+            }
+          },
+          {
+            "in": "header",
+            "name": "authorization",
+            "description": "Bearer Token",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK, User without token",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          },
+          "404": {
+            "description": "Failed. Not Found"
+          }
+        }
+      },
+      "delete": {
+        "tags": ["Admin"],
+        "summary": "Delete user by id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "User Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "header",
+            "name": "authorization",
+            "description": "Bearer Token",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "400": {
+            "description": "Failed. Bad post data."
+          },
+          "404": {
+            "description": "Failed. Not Found"
+          }
+        }
+      }
+    },
+    "/api/upload": {
+      "post": {
+        "tags": ["Upload Files"],
+        "summary": "Upload images",
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "image",
+            "description": "File to upload",
+            "required": true,
+            "type": "file"
+          },
+          {
+            "in": "header",
+            "name": "authorization",
+            "description": "Bearer Token",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "consumes": ["multipart/form-data"],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Path"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          },
+          "404": {
+            "description": "Failed. User not found"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "UserLogin": {
+      "type": "object",
+      "required": ["email", "password"],
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    },
+    "UserRegister": {
+      "type": "object",
+      "required": [
+        "firstName",
+        "lastName",
+        "email",
+        "password",
+        "passwordConfirmation"
+      ],
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "passwordConfirmation": {
+          "type": "string"
+        }
+      }
+    },
+    "CartItem": {
+      "type": "object",
+      "required": ["productId", "qty"],
+      "properties": {
+        "productId": {
+          "type": "string"
+        },
+        "qty": {
+          "type": "number"
+        }
+      }
+    },
+    "UpdateProfileReq": {
+      "type": "object",
+      "required": ["firstName", "lastName", "email", "password", "dateOfBirth"],
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "profileImage": {
+          "type": "string"
+        },
+        "isAdmin": {
+          "type": "boolean"
+        },
+        "dateOfBirth": {
+          "type": "string"
+        }
+      }
+    },
+    "User": {
+      "type": "object",
+      "properties": {
+        "user": {
+          "type": "object",
+          "properties": {
+            "_id": {
+              "type": "string"
+            },
+            "firstName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "isAdmin": {
+              "type": "boolean"
+            }
+          }
+        },
+        "token": {
+          "type": "string"
+        }
+      }
+    },
+    "Path": {
+      "type": "string"
+    }
+  }
+}

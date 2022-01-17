@@ -10,6 +10,8 @@ import uploadRoutes from "./route/uploadRoutes.js";
 import { notFound, errorHandler } from "./middleware/errorMiddelware.js";
 import path from "path";
 import cors from "cors";
+import * as swaggerDocument from "./swagger.json";
+import swaggerUi from "swagger-ui-express";
 
 const app = express();
 
@@ -24,6 +26,9 @@ app.use(express.json());
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
+
+/** Swagger Doc*/
+app.use("/swagger", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use("/api/products", productRoutes);
 

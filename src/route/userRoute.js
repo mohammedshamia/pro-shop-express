@@ -15,10 +15,9 @@ import { protect, protectAdminRoute } from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
-router
-  .route("/signup")
-  .post(registerUser)
-  .get(protect, protectAdminRoute, getAllUsers);
+router.route("/").get(protect, protectAdminRoute, getAllUsers);
+
+router.route("/signup").post(registerUser);
 
 router.route("/login").post(authUser);
 
