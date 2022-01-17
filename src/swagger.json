@@ -370,6 +370,238 @@
           }
         }
       }
+    },
+
+    "/api/products": {
+      "get": {
+        "tags": ["Products"],
+        "summary": "All Products",
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "Products",
+            "schema": {
+              "$ref": "#/definitions/Products"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": ["Admin"],
+        "summary": "Product Details",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "User Id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Profile References Body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          },
+          {
+            "in": "header",
+            "name": "authorization",
+            "description": "Bearer Token",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK, Product details"
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          }
+        }
+      }
+    },
+
+    "/api/products/top": {
+      "get": {
+        "tags": ["Products"],
+        "summary": "Top three products",
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "Top rated three products",
+            "schema": {
+              "$ref": "#/definitions/TopProducts"
+            }
+          }
+        }
+      }
+    },
+
+    "/api/products/category/{category}": {
+      "get": {
+        "tags": ["Products"],
+        "summary": "Products by category",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "category",
+            "in": "path",
+            "description": "Category name",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Products filtered by category",
+            "schema": {
+              "$ref": "#/definitions/Products"
+            }
+          }
+        }
+      }
+    },
+    "/api/products/{id}": {
+      "get": {
+        "tags": ["Products"],
+        "summary": "Product Details",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Product ID",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK, Full product details"
+          },
+          "404": {
+            "description": "Failed. Not Found"
+          }
+        }
+      },
+      "put": {
+        "tags": ["Admin"],
+        "summary": "Update Product Details",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Product ID",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Product Body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Product"
+            }
+          },
+          {
+            "in": "header",
+            "name": "authorization",
+            "description": "Bearer Token",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          },
+          "404": {
+            "description": "Failed. Not Found"
+          }
+        }
+      },
+      "delete": {
+        "tags": ["Admin"],
+        "summary": "Delete Product",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Product ID",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "header",
+            "name": "authorization",
+            "description": "Bearer Token",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Failed. Not Found"
+          }
+        }
+      }
+    },
+    "/api/products/{id}/reviews": {
+      "post": {
+        "tags": ["Products"],
+        "summary": "Add product review",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Product ID",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Review Body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Review"
+            }
+          },
+          {
+            "in": "header",
+            "name": "authorization",
+            "description": "Bearer Token",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          },
+          "404": {
+            "description": "Failed. Not Found"
+          }
+        }
+      }
     }
   },
   "definitions": {
@@ -483,8 +715,95 @@
         }
       }
     },
+    "Product": {
+      "type": "object",
+      "required": [
+        "countInStock",
+        "discount",
+        "price",
+        "description",
+        "name",
+        "brand",
+        "categories",
+        "images",
+        "colors"
+      ],
+      "properties": {
+        "countInStock": {
+          "type": "number"
+        },
+        "discount": {
+          "type": "number"
+        },
+        "price": {
+          "type": "number"
+        },
+        "description": {
+          "type": "string"
+        },
+        "brand": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "colors": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "categories": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "images": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        }
+      }
+    },
+    "Products": {
+      "type": "object",
+      "properties": {
+        "products": {
+          "type": "array"
+        },
+        "page": {
+          "type": "number"
+        },
+        "pages": {
+          "type": "number"
+        }
+      }
+    },
+    "TopProducts": {
+      "type": "array"
+    },
     "Path": {
       "type": "string"
+    },
+    "Review": {
+      "type": "object",
+      "required": ["rating", "comment"],
+      "properties": {
+        "rating": {
+          "type": "number"
+        },
+        "comment": {
+          "type": "string"
+        }
+      }
     }
   }
 }
