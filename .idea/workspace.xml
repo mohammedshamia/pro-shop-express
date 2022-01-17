@@ -89,6 +89,21 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="data:import" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="data:import" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.data:import" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -144,7 +159,7 @@
       <workItem from="1604672839649" duration="4758000" />
       <workItem from="1642283153229" duration="187000" />
       <workItem from="1642283390585" duration="3259000" />
-      <workItem from="1642346975380" duration="18474000" />
+      <workItem from="1642346975380" duration="18685000" />
     </task>
     <servers />
   </component>
