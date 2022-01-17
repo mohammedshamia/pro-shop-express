@@ -5,6 +5,7 @@ import {
   addProductSchema,
   validator,
 } from "../utils/validations/index.js";
+import categories from "../data/categories.js";
 
 // @desc Fetch all products
 // @route Get /api/products
@@ -27,6 +28,13 @@ export const getAllProducts = expressAsyncHandler(async (req, res) => {
     .skip(pageSize * (page - 1));
 
   res.json({ products, page, pages: Math.ceil(count / pageSize) });
+});
+
+// @desc Fetch all categories
+// @route Get /api/products/category/all
+// @access Public
+export const getAllCategories = expressAsyncHandler(async (req, res) => {
+  res.json({ categories });
 });
 
 // @desc Fetch all products

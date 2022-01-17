@@ -425,6 +425,21 @@
         }
       }
     },
+    "/api/products/category/all": {
+      "get": {
+        "tags": ["Products"],
+        "summary": "All categories",
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "Categories",
+            "schema": {
+              "$ref": "#/definitions/Categories"
+            }
+          }
+        }
+      }
+    },
 
     "/api/products/top": {
       "get": {
@@ -777,13 +792,39 @@
       "type": "object",
       "properties": {
         "products": {
-          "type": "array"
+          "type": "array",
+          "items": [
+            {
+              "type": "object"
+            }
+          ]
         },
         "page": {
           "type": "number"
         },
         "pages": {
           "type": "number"
+        }
+      }
+    },
+    "Categories": {
+      "type": "object",
+      "properties": {
+        "categories": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
         }
       }
     },

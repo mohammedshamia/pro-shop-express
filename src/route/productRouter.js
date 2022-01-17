@@ -8,6 +8,7 @@ import {
   addNewProductReview,
   getTopRatedProducts,
   getAllProductsByCategory,
+  getAllCategories,
 } from "../controllers/productController.js";
 import { protect, protectAdminRoute } from "../middleware/authMiddleware.js";
 
@@ -22,6 +23,11 @@ router
   .post(protect, protectAdminRoute, createProduct);
 
 router.route("/top").get(getTopRatedProducts);
+
+// @desc Fetch all categories
+// @route Get /api/products/category/all
+// @access Public
+router.route("/category/all").get(getAllCategories);
 
 // @desc Fetch a category products
 // @route Get /api/products/category/:category
