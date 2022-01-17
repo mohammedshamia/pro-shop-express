@@ -15,20 +15,25 @@ import getUserObject from "../utils/getUserObject.js";
 // @route Get /api/users/login
 // @access Public
 export const authUser = expressAsyncHandler(async (req, res) => {
-  await validator(loginSchema, req.body);
-  const { email: loginEmail, password } = req.body;
-  const email = loginEmail.toLowerCase();
-  const user = await User.findOne({ email });
+  try {
+    await validator(loginSchema, req.body);
+    const { email: loginEmail, password } = req.body;
+    const email = loginEmail.toLowerCase();
+    const user = await User.findOne({ email });
 
-  if (user && (await user.matchPassword(password))) {
-    res.json(
-      getUserObject(user, {
-        token: generateWebToken(user._id),
-      })
-    );
-  } else {
-    res.status(401);
-    throw new Error("Invalid email or password");
+    if (user && (await user.matchPassword(password))) {
+      res.json(
+        getUserObject(user, {
+          token: generateWebToken(user._id),
+        })
+      );
+    } else {
+      res.status(401);
+      throw new Error("Invalid email or password");
+    }
+  } catch (e) {
+    res.status(400);
+    throw new Error(e);
   }
 });
 
@@ -36,32 +41,37 @@ export const authUser = expressAsyncHandler(async (req, res) => {
 // @route Get /api/users/signup
 // @access Public
 export const registerUser = expressAsyncHandler(async (req, res) => {
-  await validator(registerSchema, req.body);
-  const { firstName, lastName, email: loginEmail, password } = req.body;
-  const email = loginEmail.toLowerCase();
-  const userExists = await User.findOne({ email });
+  try {
+    await validator(registerSchema, req.body);
+    const { firstName, lastName, email: loginEmail, password } = req.body;
+    const email = loginEmail.toLowerCase();
+    const userExists = await User.findOne({ email });
 
-  if (userExists) {
+    if (userExists) {
+      res.status(400);
+      throw new Error("User already exists");
+    }
+
+    const user = await User.create({
+      firstName,
+      lastName,
+      email,
+      password,
+    });
+
+    if (user) {
+      res.status(201).json(
+        getUserObject(user, {
+          token: generateWebToken(user._id),
+        })
+      );
+    } else {
+      res.status(400);
+      throw new Error("Invalid user data");
+    }
+  } catch (e) {
     res.status(400);
-    throw new Error("User already exists");
-  }
-
-  const user = await User.create({
-    firstName,
-    lastName,
-    email,
-    password,
-  });
-
-  if (user) {
-    res.status(201).json(
-      getUserObject(user, {
-        token: generateWebToken(user._id),
-      })
-    );
-  } else {
-    res.status(400);
-    throw new Error("Invalid user data");
+    throw new Error(e);
   }
 });
 
@@ -83,26 +93,31 @@ export const getUserProfile = expressAsyncHandler(async (req, res) => {
 // @route Put /api/users/profile
 // @access Private
 export const updateUserProfile = expressAsyncHandler(async (req, res) => {
-  await validator(updateProfileSchema, req.body);
-  const user = await User.findById(req.user._id);
-  const email = req.body.email.toLowerCase();
-  if (user) {
-    user.firstName = req.body.firstName || user.firstName;
-    user.profileImage = req.body.profileImage || user.profileImage;
-    user.lastName = req.body.lastName || user.lastName;
-    user.dateOfBirth = req.body.dateOfBirth || user.dateOfBirth;
-    user.email = email || user.email;
-    req.body.password && (user.password = req.body.password);
+  try {
+    await validator(updateProfileSchema, req.body);
+    const user = await User.findById(req.user._id);
+    const email = req.body.email.toLowerCase();
+    if (user) {
+      user.firstName = req.body.firstName || user.firstName;
+      user.profileImage = req.body.profileImage || user.profileImage;
+      user.lastName = req.body.lastName || user.lastName;
+      user.dateOfBirth = req.body.dateOfBirth || user.dateOfBirth;
+      user.email = email || user.email;
+      req.body.password && (user.password = req.body.password);
 
-    const updatedUser = await user.save();
-    res.json(
-      getUserObject(updatedUser, {
-        token: generateWebToken(updatedUser._id),
-      })
-    );
-  } else {
-    res.status(404);
-    throw new Error("User not found");
+      const updatedUser = await user.save();
+      res.json(
+        getUserObject(updatedUser, {
+          token: generateWebToken(updatedUser._id),
+        })
+      );
+    } else {
+      res.status(404);
+      throw new Error("User not found");
+    }
+  } catch (e) {
+    res.status(400);
+    throw new Error(e);
   }
 });
 
@@ -143,23 +158,28 @@ export const getUserById = expressAsyncHandler(async (req, res) => {
 // @route Put /api/users/profile
 // @access Private/Admin
 export const updateUser = expressAsyncHandler(async (req, res) => {
-  await validator(updateProfileSchema, req.body);
-  const user = await User.findById(req.params.id);
+  try {
+    await validator(updateProfileSchema, req.body);
+    const user = await User.findById(req.params.id);
 
-  if (user) {
-    user.firstName = req.body.firstName || user.firstName;
-    user.firstName = req.body.firstName || user.firstName;
-    user.lastName = req.body.lastName || user.lastName;
-    user.dateOfBirth = req.body.dateOfBirth || user.dateOfBirth;
-    user.profileImage = req.body.profileImage || user.profileImage;
-    user.email = req.body.email || user.email;
-    user.isAdmin = req.body.isAdmin || req.body.isAdmin;
-    const updatedUser = await user.save();
+    if (user) {
+      user.firstName = req.body.firstName || user.firstName;
+      user.firstName = req.body.firstName || user.firstName;
+      user.lastName = req.body.lastName || user.lastName;
+      user.dateOfBirth = req.body.dateOfBirth || user.dateOfBirth;
+      user.profileImage = req.body.profileImage || user.profileImage;
+      user.email = req.body.email || user.email;
+      user.isAdmin = req.body.isAdmin || req.body.isAdmin;
+      const updatedUser = await user.save();
 
-    res.json(getUserObject(updatedUser));
-  } else {
-    res.status(404);
-    throw new Error("User not found");
+      res.json(getUserObject(updatedUser));
+    } else {
+      res.status(404);
+      throw new Error("User not found");
+    }
+  } catch (e) {
+    res.status(400);
+    throw new Error(e);
   }
 });
 
@@ -167,65 +187,70 @@ export const updateUser = expressAsyncHandler(async (req, res) => {
 // @route PUT /api/users/profile/cart
 // @access Private
 export const addCartItem = expressAsyncHandler(async (req, res) => {
-  await validator(addCartItemSchema, req.body);
+  try {
+    await validator(addCartItemSchema, req.body);
 
-  const user = await User.findById(req.user._id);
-  const { qty, productId } = req.body;
-  if (user) {
-    const product = await Product.find(productId);
-    if (product && product.countInStock > qty) {
-      const itemTotalPrice = product.discount
-        ? (product.price - product.discount) * qty
-        : qty * product.price;
+    const user = await User.findById(req.user._id);
+    const { qty, productId } = req.body;
+    if (user) {
+      const product = await Product.find(productId);
+      if (product && product.countInStock > qty) {
+        const itemTotalPrice = product.discount
+          ? (product.price - product.discount) * qty
+          : qty * product.price;
 
-      if (user.cart) {
-        const cartItems = user.cart.items.filter(
-          (i) => i.product._id !== productId
-        );
-        user.cart = {
-          items: [
-            {
-              product: productId,
-              qty: qty,
-              itemTotalPrice,
-            },
-            ...cartItems,
-          ],
-          totalQty: user.cart.totalQty + qty,
-          totalPrice: user.cart.totalPrice + itemTotalPrice,
-        };
+        if (user.cart) {
+          const cartItems = user.cart.items.filter(
+            (i) => i.product._id !== productId
+          );
+          user.cart = {
+            items: [
+              {
+                product: productId,
+                qty: qty,
+                itemTotalPrice,
+              },
+              ...cartItems,
+            ],
+            totalQty: user.cart.totalQty + qty,
+            totalPrice: user.cart.totalPrice + itemTotalPrice,
+          };
+        } else {
+          user.cart = {
+            items: [
+              {
+                product: productId,
+                qty: qty,
+                itemTotalPrice,
+              },
+            ],
+            totalQty: qty,
+            totalPrice: itemTotalPrice,
+          };
+        }
       } else {
-        user.cart = {
-          items: [
-            {
-              product: productId,
-              qty: qty,
-              itemTotalPrice,
-            },
-          ],
-          totalQty: qty,
-          totalPrice: itemTotalPrice,
-        };
+        if (!product) {
+          res.status(404);
+          throw new Error("Product not found");
+        } else {
+          res.status(400);
+          throw new Error("Quantity greater than count in stock");
+        }
       }
+
+      const updatedUser = await user.save();
+      res.json(
+        getUserObject(updatedUser, {
+          token: generateWebToken(updatedUser._id),
+        })
+      );
     } else {
-      if (!product) {
-        res.status(404);
-        throw new Error("Product not found");
-      } else {
-        res.status(400);
-        throw new Error("Quantity greater than count in stock");
-      }
+      res.status(404);
+      throw new Error("User not found");
     }
-
-    const updatedUser = await user.save();
-    res.json(
-      getUserObject(updatedUser, {
-        token: generateWebToken(updatedUser._id),
-      })
-    );
-  } else {
-    res.status(404);
-    throw new Error("User not found");
+  } catch (e) {
+    res.status(400);
+    throw new Error(e);
   }
 });
 

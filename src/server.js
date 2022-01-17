@@ -10,8 +10,10 @@ import uploadRoutes from "./route/uploadRoutes.js";
 import { notFound, errorHandler } from "./middleware/errorMiddelware.js";
 import path from "path";
 import cors from "cors";
-import * as swaggerDocument from "./swagger.json";
 import swaggerUi from "swagger-ui-express";
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const swaggerDocument = require("./swagger.json");
 
 const app = express();
 

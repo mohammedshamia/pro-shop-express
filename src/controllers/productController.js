@@ -106,6 +106,7 @@ export const createProduct = expressAsyncHandler(async (req, res) => {
     res.status(201).json(createdProduct);
   } catch (e) {
     console.error(e.toString().red);
+    res.status(400);
     throw new Error(e);
   }
 });
@@ -114,42 +115,47 @@ export const createProduct = expressAsyncHandler(async (req, res) => {
 // @route PUT /api/products/:id
 // @access Private/Admin
 export const updateProduct = expressAsyncHandler(async (req, res) => {
-  await validator(addProductSchema, req.body);
-  const {
-    name,
-    price,
-    brand,
-    category,
-    countInStock,
-    numReviews,
-    discount,
-    images,
-    description,
-    categories,
-    colors,
-  } = req.body;
+  try {
+    await validator(addProductSchema, req.body);
+    const {
+      name,
+      price,
+      brand,
+      category,
+      countInStock,
+      numReviews,
+      discount,
+      images,
+      description,
+      categories,
+      colors,
+    } = req.body;
 
-  const product = await Product.findById(req.params.id);
+    const product = await Product.findById(req.params.id);
 
-  if (product) {
-    product.name = name || product.name;
-    product.discount = discount || product.discount;
-    product.price = price || product.price;
-    product.brand = brand || product.brand;
-    product.category = category || product.category;
-    product.countInStock = countInStock || product.countInStock;
-    product.numReviews = numReviews || product.numReviews;
-    product.images = images || product.images;
-    product.description = description || product.description;
-    product.categories = categories || product.categories;
-    product.colors = colors || product.colors;
+    if (product) {
+      product.name = name || product.name;
+      product.discount = discount || product.discount;
+      product.price = price || product.price;
+      product.brand = brand || product.brand;
+      product.category = category || product.category;
+      product.countInStock = countInStock || product.countInStock;
+      product.numReviews = numReviews || product.numReviews;
+      product.images = images || product.images;
+      product.description = description || product.description;
+      product.categories = categories || product.categories;
+      product.colors = colors || product.colors;
 
-    const updatedProduct = await product.save();
+      const updatedProduct = await product.save();
 
-    res.json(updatedProduct);
-  } else {
-    res.status(404);
-    throw new Error("Product not found");
+      res.json(updatedProduct);
+    } else {
+      res.status(404);
+      throw new Error("Product not found");
+    }
+  } catch (e) {
+    res.status(400);
+    throw new Error(e);
   }
 });
 
@@ -157,41 +163,46 @@ export const updateProduct = expressAsyncHandler(async (req, res) => {
 // @route POST /api/products/:id
 // @access Private
 export const addNewProductReview = expressAsyncHandler(async (req, res) => {
-  await validator(addProductReviewSchema, req.body);
-  const { rating, comment } = req.body;
+  try {
+    await validator(addProductReviewSchema, req.body);
+    const { rating, comment } = req.body;
 
-  const product = await Product.findById(req.params.id);
+    const product = await Product.findById(req.params.id);
 
-  if (product) {
-    const alreadyReviewed = product.reviews.find(
-      (r) => r.user.toString() === req.user._id.toString()
-    );
+    if (product) {
+      const alreadyReviewed = product.reviews.find(
+        (r) => r.user.toString() === req.user._id.toString()
+      );
 
-    if (alreadyReviewed) {
-      res.status(400);
-      throw new Error("Product already reviewed");
+      if (alreadyReviewed) {
+        res.status(400);
+        throw new Error("Product already reviewed");
+      }
+
+      const review = {
+        name: req.user.name,
+        rating: Number(rating),
+        comment,
+        user: req.user._id,
+      };
+
+      product.reviews.push(review);
+
+      product.numReviews = product.reviews.length;
+
+      product.rating =
+        product.reviews.reduce((acc, item) => item.rating + acc, 0) /
+        product.reviews.length;
+
+      await product.save();
+      res.status(201).json({ message: "Review added" });
+    } else {
+      res.status(404);
+      throw new Error("Product not found");
     }
-
-    const review = {
-      name: req.user.name,
-      rating: Number(rating),
-      comment,
-      user: req.user._id,
-    };
-
-    product.reviews.push(review);
-
-    product.numReviews = product.reviews.length;
-
-    product.rating =
-      product.reviews.reduce((acc, item) => item.rating + acc, 0) /
-      product.reviews.length;
-
-    await product.save();
-    res.status(201).json({ message: "Review added" });
-  } else {
-    res.status(404);
-    throw new Error("Product not found");
+  } catch (e) {
+    res.status(400);
+    throw new Error(e);
   }
 });
 
