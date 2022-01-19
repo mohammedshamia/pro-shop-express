@@ -208,6 +208,13 @@
         "summary": "Users Details",
         "parameters": [
           {
+            "name": "pageNumber",
+            "in": "query",
+            "description": "Page Number",
+            "required": false,
+            "type": "string"
+          },
+          {
             "in": "header",
             "name": "authorization",
             "description": "Bearer Token",
@@ -377,6 +384,22 @@
         "tags": ["Products"],
         "summary": "All Products",
         "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "description": "Search keyword",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "description": "Page Number",
+            "required": false,
+            "type": "string"
+          }
+        ],
         "responses": {
           "200": {
             "description": "Products",
