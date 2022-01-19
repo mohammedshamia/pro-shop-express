@@ -280,7 +280,7 @@
           {
             "in": "body",
             "name": "body",
-            "description": "Profile References Body",
+            "description": "Profile Body",
             "required": true,
             "schema": {
               "$ref": "#/definitions/UpdateProfileReq"
@@ -411,19 +411,12 @@
       },
       "post": {
         "tags": ["Admin"],
-        "summary": "Product Details",
+        "summary": "Add Product",
         "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "User Id",
-            "required": true,
-            "type": "string"
-          },
           {
             "in": "body",
             "name": "body",
-            "description": "Profile References Body",
+            "description": "Product Details",
             "required": true,
             "schema": {
               "$ref": "#/definitions/Product"
