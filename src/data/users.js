@@ -2,20 +2,29 @@ import bcrypt from "bcryptjs";
 
 const users = [
   {
-    name: "Admin User",
+    firstName: "Admin",
+    lastName: "User",
     email: "admin@example.com",
-    password: bcrypt.hashSync("123456", 10),
+    profileImage:
+      "https://d2qp0siotla746.cloudfront.net/img/use-cases/profile-picture/template_0.jpg",
+    password: bcrypt.hashSync("123456PAs@", 10),
     isAdmin: true,
   },
   {
-    name: "John Doe",
+    firstName: "John",
+    lastName: "Doe",
     email: "john@example.com",
-    password: bcrypt.hashSync("123456", 10),
+    profileImage:
+      "https://d2qp0siotla746.cloudfront.net/img/use-cases/profile-picture/template_0.jpg",
+    password: bcrypt.hashSync("123456PAs@", 10),
   },
   {
-    name: "Jane Doe",
+    firstName: "Jane",
+    lastName: "Doe",
     email: "jane@example.com",
-    password: bcrypt.hashSync("123456", 10),
+    profileImage:
+      "https://d2qp0siotla746.cloudfront.net/img/use-cases/profile-picture/template_0.jpg",
+    password: bcrypt.hashSync("123456PAs@", 10),
   },
 ];
 
