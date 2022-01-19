@@ -171,7 +171,6 @@ export const updateUser = expressAsyncHandler(async (req, res) => {
 
     if (user) {
       user.firstName = req.body.firstName || user.firstName;
-      user.firstName = req.body.firstName || user.firstName;
       user.lastName = req.body.lastName || user.lastName;
       user.dateOfBirth = req.body.dateOfBirth || user.dateOfBirth;
       user.profileImage = req.body.profileImage || user.profileImage;
