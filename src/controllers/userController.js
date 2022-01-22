@@ -199,7 +199,7 @@ export const addCartItem = expressAsyncHandler(async (req, res) => {
     const user = await User.findById(req.user._id);
     const { qty, productId } = req.body;
     if (user) {
-      const product = await Product.find(productId);
+      const product = await Product.findById(productId);
       if (product && product.countInStock > qty) {
         const itemTotalPrice = product.discount
           ? (product.price - product.discount) * qty
