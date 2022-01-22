@@ -32,7 +32,7 @@ const upload = multer({
 });
 
 router.post("/", upload.single("image"), (req, res) => {
-  res.send(`/${req.file.path}`);
+  res.send(`https://prohop-express.herokuapp.com/${req.file.path}`);
 });
 
 export default router;
