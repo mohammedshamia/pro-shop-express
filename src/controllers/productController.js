@@ -188,7 +188,8 @@ export const addNewProductReview = expressAsyncHandler(async (req, res) => {
       }
 
       const review = {
-        name: req.user.name,
+        name: `${req.user.firstName} ${req.user.lastName}`,
+        profileImage: req.user.profileImage,
         rating: Number(rating),
         comment,
         user: req.user._id,
@@ -203,7 +204,7 @@ export const addNewProductReview = expressAsyncHandler(async (req, res) => {
         product.reviews.length;
 
       await product.save();
-      res.status(201).json({ message: "Review added" });
+      res.status(201).json({ message: "Review added", product });
     } else {
       res.status(404);
       throw new Error("Product not found");

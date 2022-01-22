@@ -14,8 +14,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99941d3-4d56-4aa9-9806-275bae64002f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/data/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/swagger.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/swagger.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/productController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,8 +112,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.data:import" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.data:import" />
       </list>
     </recent_temporary>
   </component>
@@ -174,7 +174,8 @@
       <workItem from="1642346975380" duration="18852000" />
       <workItem from="1642408855154" duration="52000" />
       <workItem from="1642424457225" duration="5753000" />
-      <workItem from="1642603086814" duration="2623000" />
+      <workItem from="1642603086814" duration="3733000" />
+      <workItem from="1642878754703" duration="559000" />
     </task>
     <servers />
   </component>
