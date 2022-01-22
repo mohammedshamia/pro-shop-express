@@ -14,8 +14,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99941d3-4d56-4aa9-9806-275bae64002f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/uploads/airpods.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/alexa.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/camera.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/mouse.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/phone.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/playstation.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/productController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/phone.jpg-1604484979368.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/undefined-1604484782816.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/undefined-1604484853938.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/undefined-1604484916699.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,8 +122,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.data:import" />
+        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -175,7 +185,7 @@
       <workItem from="1642408855154" duration="52000" />
       <workItem from="1642424457225" duration="5753000" />
       <workItem from="1642603086814" duration="3733000" />
-      <workItem from="1642878754703" duration="559000" />
+      <workItem from="1642878754703" duration="1856000" />
     </task>
     <servers />
   </component>
