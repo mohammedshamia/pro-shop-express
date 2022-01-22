@@ -201,7 +201,6 @@ export const addCartItem = expressAsyncHandler(async (req, res) => {
       path: "cart.items.product",
       model: "Product",
     });
-    return res.json(getUserObject(user));
 
     const { qty, productId } = req.body;
     if (user) {
