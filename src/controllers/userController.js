@@ -19,7 +19,7 @@ export const authUser = expressAsyncHandler(async (req, res) => {
     await validator(loginSchema, req.body);
     const { email: loginEmail, password } = req.body;
     const email = loginEmail.toLowerCase();
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ email }).populate("product");
 
     if (user && (await user.matchPassword(password))) {
       res.json(
@@ -79,7 +79,7 @@ export const registerUser = expressAsyncHandler(async (req, res) => {
 // @route Get /api/users/profile
 // @access Private
 export const getUserProfile = expressAsyncHandler(async (req, res) => {
-  const user = await User.findById(req.user._id);
+  const user = await User.findById(req.user._id).populate("product");
 
   if (user) {
     res.json(getUserObject(user));
@@ -95,7 +95,7 @@ export const getUserProfile = expressAsyncHandler(async (req, res) => {
 export const updateUserProfile = expressAsyncHandler(async (req, res) => {
   try {
     await validator(updateProfileSchema, req.body);
-    const user = await User.findById(req.user._id);
+    const user = await User.findById(req.user._id).populate("product");
     const email = req.body.email.toLowerCase();
     if (user) {
       user.firstName = req.body.firstName || user.firstName;
@@ -130,6 +130,7 @@ export const getAllUsers = expressAsyncHandler(async (req, res) => {
 
   const count = await User.countDocuments();
   const users = await User.find()
+    .populate("product")
     .limit(pageSize)
     .skip(pageSize * (page - 1));
 
@@ -167,7 +168,7 @@ export const getUserById = expressAsyncHandler(async (req, res) => {
 export const updateUser = expressAsyncHandler(async (req, res) => {
   try {
     await validator(updateProfileSchema, req.body);
-    const user = await User.findById(req.params.id);
+    const user = await User.findById(req.params.id).populate("product");
 
     if (user) {
       user.firstName = req.body.firstName || user.firstName;
@@ -196,7 +197,12 @@ export const addCartItem = expressAsyncHandler(async (req, res) => {
   try {
     await validator(addCartItemSchema, req.body);
 
-    const user = await User.findById(req.user._id);
+    const user = await User.findById(req.user._id).populate({
+      path: "cart.items.product",
+      model: "Product",
+    });
+    return res.json(getUserObject(user));
+
     const { qty, productId } = req.body;
     if (user) {
       const product = await Product.findById(productId);
@@ -264,7 +270,7 @@ export const addCartItem = expressAsyncHandler(async (req, res) => {
 // @route DELETE /api/users/profile/cart?productId
 // @access Private
 export const deleteCartItem = expressAsyncHandler(async (req, res) => {
-  const user = await User.findById(req.user._id);
+  const user = await User.findById(req.user._id).populate("product");
   const { productId } = req.params;
   if (user) {
     const product = await Product.find(productId);
