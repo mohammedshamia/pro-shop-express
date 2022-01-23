@@ -67,6 +67,7 @@ export const createOrder = expressAsyncHandler(async (req, res) => {
     res.status(201).json({
       clientSecret: paymentIntent.client_secret,
       order: createdOrder,
+      message: "Order Created Successfully",
     });
   } catch (e) {
     res.status(400);

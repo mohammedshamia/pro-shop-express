@@ -145,14 +145,13 @@ export const getAllUsers = expressAsyncHandler(async (req, res) => {
 
   const count = await User.countDocuments();
   const users = await User.find()
-
     .populate({
       path: "cart.items.product",
       model: "Product",
     })
-    .exec()
     .limit(pageSize)
-    .skip(pageSize * (page - 1));
+    .skip(pageSize * (page - 1))
+    .exec();
 
   res.json({ users, page, pages: Math.ceil(count / pageSize) });
 });
