@@ -223,7 +223,7 @@ export const addCartItem = expressAsyncHandler(async (req, res) => {
 
     const user = await User.findById(req.user._id)
       .populate({
-        path: "cart.items.product",
+        path: "cart.items:[product]",
         model: "Product",
       })
       .exec();
@@ -244,6 +244,10 @@ export const addCartItem = expressAsyncHandler(async (req, res) => {
           const deletedItem = user.cart.items.find(
             (i) => i.product._id == productId
           );
+          const newQty = deletedItem ? qty - deletedItem.qty : qty;
+          const newPrice = deletedItem
+            ? itemTotalPrice - deletedItem.itemTotalPrice
+            : itemTotalPrice;
           user.cart = {
             items: [
               {
@@ -253,13 +257,8 @@ export const addCartItem = expressAsyncHandler(async (req, res) => {
               },
               ...cartItems,
             ],
-            totalQty:
-              user.cart.totalQty + (deletedItem ? qty - deletedItem.qty : qty),
-            totalPrice:
-              user.cart.totalPrice +
-              (deletedItem
-                ? itemTotalPrice - deletedItem.itemTotalPrice
-                : itemTotalPrice),
+            totalQty: user.cart.totalQty + newQty,
+            totalPrice: user.cart.totalPrice + newPrice,
           };
         } else {
           user.cart = {
