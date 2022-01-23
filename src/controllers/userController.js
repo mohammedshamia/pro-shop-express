@@ -19,7 +19,12 @@ export const authUser = expressAsyncHandler(async (req, res) => {
     await validator(loginSchema, req.body);
     const { email: loginEmail, password } = req.body;
     const email = loginEmail.toLowerCase();
-    const user = await User.findOne({ email }).populate("product");
+    const user = await User.findOne({ email })
+      .populate({
+        path: "cart.items.product",
+        model: "Product",
+      })
+      .exec();
 
     if (user && (await user.matchPassword(password))) {
       res.json(
@@ -79,7 +84,12 @@ export const registerUser = expressAsyncHandler(async (req, res) => {
 // @route Get /api/users/profile
 // @access Private
 export const getUserProfile = expressAsyncHandler(async (req, res) => {
-  const user = await User.findById(req.user._id).populate("product");
+  const user = await User.findById(req.user._id)
+    .populate({
+      path: "cart.items.product",
+      model: "Product",
+    })
+    .exec();
 
   if (user) {
     res.json(getUserObject(user));
@@ -95,7 +105,12 @@ export const getUserProfile = expressAsyncHandler(async (req, res) => {
 export const updateUserProfile = expressAsyncHandler(async (req, res) => {
   try {
     await validator(updateProfileSchema, req.body);
-    const user = await User.findById(req.user._id).populate("product");
+    const user = await User.findById(req.user._id)
+      .populate({
+        path: "cart.items.product",
+        model: "Product",
+      })
+      .exec();
     const email = req.body.email.toLowerCase();
     if (user) {
       user.firstName = req.body.firstName || user.firstName;
@@ -130,7 +145,12 @@ export const getAllUsers = expressAsyncHandler(async (req, res) => {
 
   const count = await User.countDocuments();
   const users = await User.find()
-    .populate("product")
+
+    .populate({
+      path: "cart.items.product",
+      model: "Product",
+    })
+    .exec()
     .limit(pageSize)
     .skip(pageSize * (page - 1));
 
@@ -168,7 +188,12 @@ export const getUserById = expressAsyncHandler(async (req, res) => {
 export const updateUser = expressAsyncHandler(async (req, res) => {
   try {
     await validator(updateProfileSchema, req.body);
-    const user = await User.findById(req.params.id).populate("product");
+    const user = await User.findById(req.params.id)
+      .populate({
+        path: "cart.items.product",
+        model: "Product",
+      })
+      .exec();
 
     if (user) {
       user.firstName = req.body.firstName || user.firstName;
@@ -197,10 +222,12 @@ export const addCartItem = expressAsyncHandler(async (req, res) => {
   try {
     await validator(addCartItemSchema, req.body);
 
-    const user = await User.findById(req.user._id).populate({
-      path: "cart.items.product",
-      model: "Product",
-    });
+    const user = await User.findById(req.user._id)
+      .populate({
+        path: "cart.items.product",
+        model: "Product",
+      })
+      .exec();
 
     const { qty, productId } = req.body;
     if (user) {
@@ -210,9 +237,13 @@ export const addCartItem = expressAsyncHandler(async (req, res) => {
           ? (product.price - product.discount) * qty
           : qty * product.price;
 
-        if (user.cart) {
+        if (user.cart.items.length) {
           const cartItems = user.cart.items.filter(
-            (i) => i.product._id !== productId
+            (i) => i.product._id != productId
+          );
+
+          const deletedItem = user.cart.items.find(
+            (i) => i.product._id == productId
           );
           user.cart = {
             items: [
@@ -223,8 +254,13 @@ export const addCartItem = expressAsyncHandler(async (req, res) => {
               },
               ...cartItems,
             ],
-            totalQty: user.cart.totalQty + qty,
-            totalPrice: user.cart.totalPrice + itemTotalPrice,
+            totalQty:
+              user.cart.totalQty + (deletedItem ? qty - deletedItem.qty : qty),
+            totalPrice:
+              user.cart.totalPrice +
+              +(deletedItem
+                ? itemTotalPrice - deletedItem.itemTotalPrice
+                : itemTotalPrice),
           };
         } else {
           user.cart = {
@@ -269,18 +305,25 @@ export const addCartItem = expressAsyncHandler(async (req, res) => {
 // @route DELETE /api/users/profile/cart?productId
 // @access Private
 export const deleteCartItem = expressAsyncHandler(async (req, res) => {
-  const user = await User.findById(req.user._id).populate("product");
-  const { productId } = req.params;
+  const user = await User.findById(req.user._id)
+    .populate({
+      path: "cart.items.product",
+      model: "Product",
+    })
+    .exec();
+  const { productId } = req.query;
   if (user) {
-    const product = await Product.find(productId);
+    const product = await Product.findById(productId);
+
     if (product) {
-      if (user.cart) {
+      if (user.cart.items.length) {
         const cartItems = user.cart.items.filter(
-          (i) => i.product._id !== productId
+          (i) => i.product._id != productId
         );
         const deletedItem = user.cart.items.find(
-          (i) => i.product._id === productId
+          (i) => i.product._id == productId
         );
+
         user.cart = {
           items: cartItems,
           totalQty: user.cart.totalQty - deletedItem.qty,
