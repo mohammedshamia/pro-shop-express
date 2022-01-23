@@ -92,8 +92,7 @@ export const paymentWebhook = expressAsyncHandler(async (request, response) => {
     event = stripe.webhooks.constructEvent(
       request.rawBody,
       sig,
-      "whsec_8v7Z4KtN1wE7479ZVj2lc1GyLdlxCDyK"
-      //process.env.STRIPE_WEBHOOK_SECRET_KEY
+      process.env.STRIPE_WEBHOOK_SECRET_KEY
     );
   } catch (err) {
     console.log(`Webhook Error: ${err.message}`);
