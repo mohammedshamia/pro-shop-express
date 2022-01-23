@@ -255,12 +255,11 @@ export const addCartItem = expressAsyncHandler(async (req, res) => {
             ],
             totalQty:
               user.cart.totalQty + (deletedItem ? qty - deletedItem.qty : qty),
-            totalPrice: (
+            totalPrice:
               user.cart.totalPrice +
-              +(deletedItem
+              (deletedItem
                 ? itemTotalPrice - deletedItem.itemTotalPrice
-                : itemTotalPrice)
-            ).toFixed(0),
+                : itemTotalPrice),
           };
         } else {
           user.cart = {
@@ -272,7 +271,7 @@ export const addCartItem = expressAsyncHandler(async (req, res) => {
               },
             ],
             totalQty: qty,
-            totalPrice: itemTotalPrice.toFixed(0),
+            totalPrice: itemTotalPrice,
           };
         }
       } else {
