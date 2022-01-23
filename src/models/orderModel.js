@@ -9,10 +9,8 @@ const orderSchema = mongoose.Schema(
     },
     orderItems: [
       {
-        name: { type: String, required: true },
+        itemTotalPrice: { type: Number, required: true },
         qty: { type: Number, required: true },
-        image: { type: String, required: true },
-        price: { type: Number, required: true },
         product: {
           type: mongoose.Schema.Types.ObjectId,
           required: true,
@@ -30,11 +28,9 @@ const orderSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    paymentResult: {
-      id: { type: String },
-      status: { type: String },
-      update_time: { type: String },
-      email_address: { type: String },
+    clientSecret: {
+      type: String,
+      required: false,
     },
     taxPrice: {
       type: Number,

@@ -23,7 +23,16 @@ app.use(cors());
 dotenv.config();
 
 connectDB();
-app.use(express.json());
+
+app.use(
+  express.json({
+    verify: function (req, res, buf) {
+      if (req.originalUrl.startsWith("/api/orders/payment-webhook")) {
+        req.rawBody = buf.toString();
+      }
+    },
+  })
+);
 
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
@@ -40,8 +49,10 @@ app.use("/api/orders", orderRoutes);
 
 app.use("/api/upload", uploadRoutes);
 
-app.get("/api/config/paypal", (req, res) =>
-  res.send(process.env.PAYPAL_CLIENT_ID)
+app.get("/api/config/stripe-key", (req, res) =>
+  res.json({
+    publishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
+  })
 );
 
 const __dirname = path.resolve();

@@ -1,6 +1,8 @@
 import * as yup from "yup";
 
-export const addProductReviewSchema = yup.object().shape({
-  rating: yup.number().min(0).max(5).required("Rating is required"),
-  comment: yup.string().required("Comment is required"),
+export const createOrderSchema = yup.object().shape({
+  address: yup.string().required("Address is required"),
+  city: yup.string().required("City is required"),
+  postalCode: yup.string().required("PostalCode is required"),
+  country: yup.string().required("Country is required"),
 });

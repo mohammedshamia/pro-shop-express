@@ -13,8 +13,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f99941d3-4d56-4aa9-9806-275bae64002f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/data/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/products.js" afterDir="false" />
+    <list default="true" id="f99941d3-4d56-4aa9-9806-275bae64002f" name="Default Changelist" comment="Bug fixing and setup payment">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/orderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/orderController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/orderModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/orderModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/route/orderRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/orderRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swagger.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/swagger.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/validations/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validations/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/validations/orderValidations/createOrderSchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validations/orderValidations/createOrderSchema.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +63,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.17.4" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.17.4" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/data" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/utils/validations" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -66,11 +76,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\BRAVO\Desktop\GGateway\React Bootcamp\pro-shop\src\utils\validations" />
       <recent name="C:\Users\BRAVO\Desktop\GGateway\React Bootcamp\pro-shop\src\data" />
       <recent name="C:\Users\BRAVO\Desktop\GGateway\React Bootcamp\pro-shop\src" />
       <recent name="C:\Users\BRAVO\Desktop\GGateway\React Bootcamp\pro-shop\src\utils\validations\userValidations" />
       <recent name="C:\Users\BRAVO\Desktop\GGateway\React Bootcamp\pro-shop\src\utils\validations\productValidations" />
-      <recent name="C:\Users\BRAVO\Desktop\GGateway\React Bootcamp\pro-shop\src\utils\validations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\BRAVO\Desktop\GGateway\React Bootcamp\pro-shop\src\utils\validations\authValidations" />
@@ -174,7 +184,7 @@
       <workItem from="1642408855154" duration="52000" />
       <workItem from="1642424457225" duration="5753000" />
       <workItem from="1642603086814" duration="3733000" />
-      <workItem from="1642878754703" duration="2065000" />
+      <workItem from="1642878754703" duration="19620000" />
     </task>
     <servers />
   </component>
@@ -195,6 +205,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Bug fix" />
+    <MESSAGE value="Bug fixing and setup payment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fixing and setup payment" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

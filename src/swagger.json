@@ -633,6 +633,159 @@
           }
         }
       }
+    },
+
+    "/api/orders": {
+      "get": {
+        "tags": ["Admin"],
+        "summary": "Get All Orders",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "description": "Page Number",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "header",
+            "name": "authorization",
+            "description": "Bearer Token",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Orders"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Orders"],
+        "summary": "Create order",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Order Shipping address",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ShippingAddress"
+            }
+          },
+          {
+            "in": "header",
+            "name": "authorization",
+            "description": "Bearer Token",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK, Order details and payment id"
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          }
+        }
+      }
+    },
+
+    "/api/orders/myorders": {
+      "get": {
+        "tags": ["Orders"],
+        "summary": "Get All Orders",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "description": "Page Number",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "header",
+            "name": "authorization",
+            "description": "Bearer Token",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Orders"
+          }
+        }
+      }
+    },
+
+    "/api/orders/{id}": {
+      "get": {
+        "tags": ["Orders"],
+        "summary": "Order details",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Order ID",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "header",
+            "name": "authorization",
+            "description": "Bearer Token",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK, Full order details"
+          },
+          "404": {
+            "description": "Failed. Not Found"
+          }
+        }
+      }
+    },
+
+    "/api/orders/{id}/deliver": {
+      "put": {
+        "tags": ["Admin"],
+        "summary": "Order details",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Order ID",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "header",
+            "name": "authorization",
+            "description": "Bearer Token",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "OK, Full order details"
+          },
+          "404": {
+            "description": "Failed. Not Found"
+          }
+        }
+      }
     }
   },
   "definitions": {
@@ -858,6 +1011,24 @@
           "type": "number"
         },
         "comment": {
+          "type": "string"
+        }
+      }
+    },
+    "ShippingAddress": {
+      "type": "object",
+      "required": ["address", "city", "postalCode", "country"],
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "postalCode": {
+          "type": "string"
+        },
+        "country": {
           "type": "string"
         }
       }

@@ -256,11 +256,12 @@ export const addCartItem = expressAsyncHandler(async (req, res) => {
             ],
             totalQty:
               user.cart.totalQty + (deletedItem ? qty - deletedItem.qty : qty),
-            totalPrice:
+            totalPrice: (
               user.cart.totalPrice +
               +(deletedItem
                 ? itemTotalPrice - deletedItem.itemTotalPrice
-                : itemTotalPrice),
+                : itemTotalPrice)
+            ).toFixed(0),
           };
         } else {
           user.cart = {
@@ -272,7 +273,7 @@ export const addCartItem = expressAsyncHandler(async (req, res) => {
               },
             ],
             totalQty: qty,
-            totalPrice: itemTotalPrice,
+            totalPrice: itemTotalPrice.toFixed(0),
           };
         }
       } else {
@@ -327,7 +328,9 @@ export const deleteCartItem = expressAsyncHandler(async (req, res) => {
         user.cart = {
           items: cartItems,
           totalQty: user.cart.totalQty - deletedItem.qty,
-          totalPrice: user.cart.totalPrice - deletedItem.itemTotalPrice,
+          totalPrice: (
+            user.cart.totalPrice - deletedItem.itemTotalPrice
+          ).toFixed(0),
         };
       }
     } else {
