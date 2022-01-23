@@ -49,7 +49,7 @@ app.use("/api/orders", orderRoutes);
 
 app.use("/api/upload", uploadRoutes);
 
-app.get("/api/config/stripe-key", (req, res) =>
+app.get("/api/config/stripe-key", async (req, res) =>
   res.json({
     publishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
   })

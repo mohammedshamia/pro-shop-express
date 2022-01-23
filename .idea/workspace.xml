@@ -15,7 +15,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f99941d3-4d56-4aa9-9806-275bae64002f" name="Default Changelist" comment="Bug fixing and setup payment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/orderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/orderController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/swagger.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/swagger.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +177,8 @@
       <workItem from="1642424457225" duration="5753000" />
       <workItem from="1642603086814" duration="3733000" />
       <workItem from="1642878754703" duration="19665000" />
-      <workItem from="1642902640784" duration="6000" />
+      <workItem from="1642902640784" duration="79000" />
+      <workItem from="1642940026539" duration="92000" />
     </task>
     <servers />
   </component>
