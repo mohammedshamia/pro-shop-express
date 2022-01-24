@@ -212,7 +212,7 @@
             "in": "query",
             "description": "Page Number",
             "required": false,
-            "type": "string"
+            "type": "number"
           },
           {
             "in": "header",
@@ -397,7 +397,7 @@
             "in": "query",
             "description": "Page Number",
             "required": false,
-            "type": "string"
+            "type": "number"
           }
         ],
         "responses": {
@@ -646,7 +646,7 @@
             "in": "query",
             "description": "Page Number",
             "required": false,
-            "type": "string"
+            "type": "number"
           },
           {
             "in": "header",
@@ -706,7 +706,7 @@
             "in": "query",
             "description": "Page Number",
             "required": false,
-            "type": "string"
+            "type": "number"
           },
           {
             "in": "header",
