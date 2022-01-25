@@ -855,7 +855,7 @@
     },
     "UpdateProfileReq": {
       "type": "object",
-      "required": ["firstName", "lastName", "email", "password", "dateOfBirth"],
+      "required": ["firstName", "lastName", "email", "dateOfBirth"],
       "properties": {
         "firstName": {
           "type": "string"
