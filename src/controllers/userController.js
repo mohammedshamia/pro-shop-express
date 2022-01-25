@@ -284,7 +284,14 @@ export const addCartItem = expressAsyncHandler(async (req, res) => {
         }
       }
 
-      const updatedUser = await user.save();
+      await user.save();
+      const updatedUser = await User.findById(req.user._id)
+        .populate({
+          path: "cart.items.product",
+          model: "Product",
+        })
+        .exec();
+
       res.json(
         getUserObject(updatedUser, {
           token: generateWebToken(updatedUser._id),
