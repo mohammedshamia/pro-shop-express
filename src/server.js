@@ -14,6 +14,8 @@ import swaggerUi from "swagger-ui-express";
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 const swaggerDocument = require("./swagger.json");
+import rateLimit from "express-rate-limit";
+import mongoSanitize from "express-mongo-sanitize";
 
 const app = express();
 
@@ -23,6 +25,19 @@ app.use(cors());
 dotenv.config();
 
 connectDB();
+
+/** apply rate limiter to all requests*/
+app.use(
+  rateLimit({
+    windowMs: 60 * 1000, // 1 minutes
+    max: 10, // limit each IP to 3 failed requests per windowMs
+    skipSuccessfulRequests: false,
+  })
+);
+
+/** Express 4.x middleware which sanitizes user-supplied data to prevent MongoDB Operator Injection. */
+// To remove data that contains prohibited characters:
+app.use(mongoSanitize());
 
 app.use(
   express.json({
