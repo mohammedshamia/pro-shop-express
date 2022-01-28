@@ -167,7 +167,9 @@ export const getUserOrders = expressAsyncHandler(async (req, res) => {
   const pageSize = 12;
   const page = Number(req.query.pageNumber) || 1;
 
-  const count = await Order.countDocuments();
+  const count = await Order.countDocuments({
+    user: req.user._id,
+  });
   const orders = await Order.find({
     user: req.user._id,
   })
