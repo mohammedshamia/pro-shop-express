@@ -168,7 +168,9 @@ export const getUserOrders = expressAsyncHandler(async (req, res) => {
   const page = Number(req.query.pageNumber) || 1;
 
   const count = await Order.countDocuments();
-  const orders = await Order.find()
+  const orders = await Order.find({
+    user: req.user._id,
+  })
     .populate("orderItems.product")
     .limit(pageSize)
     .skip(pageSize * (page - 1));
