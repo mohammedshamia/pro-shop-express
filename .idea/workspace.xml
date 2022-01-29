@@ -112,8 +112,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.data:import" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.data:import" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +187,7 @@
       <workItem from="1643280983628" duration="774000" />
       <workItem from="1643281867687" duration="7000" />
       <workItem from="1643404550729" duration="342000" />
-      <workItem from="1643414231064" duration="151000" />
+      <workItem from="1643414231064" duration="1566000" />
     </task>
     <servers />
   </component>

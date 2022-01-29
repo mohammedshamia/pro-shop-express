@@ -110,7 +110,7 @@ export const paymentWebhook = expressAsyncHandler(async (request, response) => {
     case "payment_intent.succeeded":
       paymentIntent = event.data.object;
       // Then define and call a function to handle the event payment_intent.succeeded
-      const order = await Order.findById(request.params.id);
+      const order = await Order.findById(event.data.object.metadata.orderId);
 
       if (order) {
         order.isPaid = true;
